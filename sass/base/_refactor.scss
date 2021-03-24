@@ -1,0 +1,59 @@
+// -----------------------------------------------------------
+/* Reset some basic automatic style */
+// -----------------------------------------------------------
+
+html {
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+}
+
+* {
+	color: black;
+}
+
+body {
+	margin: 0;
+}
+
+h1 {
+	margin: 0;
+}
+
+li,
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+
+// img resizing
+
+img {
+	max-width: 100%;
+}
+
+// links & buttons basic refactor
+
+button {
+	/* background-color: inherit; */
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+a {
+	/* display: block; */
+	width: 100%;
+	text-decoration: none;
+}
+
+// Scrolling
+// for people who desactivate the scrolling behavior on browser
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
