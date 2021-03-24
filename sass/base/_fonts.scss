@@ -1,0 +1,27 @@
+* {
+	font-family: $font-txt;
+}
+
+.logo {
+	font-family: $font-logo;
+    font-weight: normal;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+p {
+	font-size: 18px;
+	font-weight: 300;
+}
+button {
+	font-size: 16px;
+	/* font-weight: 400; */
+}
+span {
+	background-color: lawngreen;
+}
+footer h3 {
+    font-weight: normal;
+}
