@@ -1,0 +1,11 @@
+// -----------------------------------------------------------
+/* functions*/
+// -----------------------------------------------------------
+
+// to constrast text color in comparison to the background color
+@function color-txt-switch($bg-color) {
+	@if (lightness($bg-color) < 50%) {
+		@return white;
+	}
+	@return black;
+}
