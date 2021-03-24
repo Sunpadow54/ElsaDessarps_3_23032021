@@ -1,0 +1,151 @@
+@charset "UTF-8";
+/* variables*/
+/* Reset some basic automatic style */
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+* {
+  color: black;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+li,
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  /* background-color: inherit; */
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  /* display: block; */
+  width: 100%;
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.logo {
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+button {
+  font-size: 16px;
+  /* font-weight: 400; */
+}
+
+span {
+  background-color: lawngreen;
+}
+
+footer h3 {
+  font-weight: normal;
+}
+
+header {
+  background-color: #9d9de5;
+}
+
+section {
+  background-color: #e4b9ac;
+}
+
+button {
+  background-color: khaki;
+}
+
+div {
+  background-color: #94ecc0;
+}
+
+.main_header {
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* .return-btn {
+
+  } */
+}
+
+footer {
+  padding: 1.5rem;
+  background-color: #353535;
+}
+footer h3 {
+  margin-top: 0;
+  color: white;
+}
+
+.footer__link, .footer__link--partenaire, .footer__link--propose {
+  margin: 0.5rem 0;
+  color: white;
+}
+.footer__link a, .footer__link--partenaire a, .footer__link--propose a {
+  color: inherit;
+}
+.footer__link::before, .footer__link--partenaire::before, .footer__link--propose::before {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  /* fontawesome recommendation */
+  font-variant: normal;
+  /* fontawesome recommendation */
+  text-rendering: auto;
+  /* fontawesome recommendation */
+  font-weight: 900;
+  margin-right: 0.7rem;
+}
+.footer__link:hover, .footer__link--partenaire:hover, .footer__link--propose:hover {
+  color: #9356DC;
+}
+.footer__link:active, .footer__link--partenaire:active, .footer__link--propose:active {
+  color: #9356DC;
+}
+
+.footer__link--propose::before {
+  content: "";
+}
+
+.footer__link--partenaire::before {
+  content: "";
+}
+
+/*# sourceMappingURL=style.css.map */
