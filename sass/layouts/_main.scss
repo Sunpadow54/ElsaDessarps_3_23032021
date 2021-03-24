@@ -3,31 +3,111 @@
 // -----------------------------------------------------------
 
 // Banner of the brand with search button
+
 .hero {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    text-align: center;
-    h2 {
-        margin: 0 3rem;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	text-align: center;
+
+	h2 {
+		margin: 0 3rem;
+	}
+
+	&__description {
+		padding: 2.5rem 0;
+	}
+}
+
+
+.hero__search {
+	background-color: $color-fourth;
+	width: 100%;
+	padding: 0.85rem;
+	margin: 0;
+	opacity: 0.7;
+
+	input {
+		text-align: center;
+		width: 8.6rem;
+		background-color: transparent;
+
+		&::placeholder {
+			opacity: 1;
+		}
+	}
+}
+
+
+// Aside : Helper of the site (how to use it)
+
+.helper {
+	padding: 1rem ;
+
+	ol {
+		list-style-type: none;
+        padding:1rem 0;
+	}
+}
+
+
+.helper__list {
+	counter-increment: compteur;
+	display: flex;
+    flex-direction: row-reverse;
+	justify-content: flex-end;
+	align-items: center;
+    margin-left:1rem;
+    margin-bottom: 1.55rem;;
+	height: 4.3rem;
+	border-radius: 25px;
+
+    //numbers
+	&::before {
+        @include txt-color($color-primary);
+
+        position: relative;
+        left: -12px;
+		content: counter(compteur);
+		display: flex;
+		justify-content: center;
+        align-items: center;
+		order: 1;
+		width: 27px;
+        height: 27px;
+        border-radius:50%;
+        background-color: $color-primary;
+        font-size: 0.9rem;
+	}
+
+    //icons
+	&::after {
+		@include icons-b-standard;
+
+        padding:0.2rem;
+        padding-right:1rem;
+        opacity: 0.5;
+	}
+
+    // hover/active change the icons
+    &:hover::after {
+        opacity: 1;
+        color: $color-primary;
     }
-    &__description {
-        padding: 2.5rem 0;
+    
+    &:active::after{
+        opacity: 1;
+        color: $color-primary;
     }
 }
 
-.hero__search {
-    background-color: $color-fourth;
-    width: 100%;
-    padding:0.85rem;
-    margin: 0;
-    opacity: 0.7;
-    input {
-        text-align: center;
-        width:8.6rem;
-        background-color: transparent;
-        &::placeholder {
-            opacity: 1;
-        }
-    }
+.helper__list:first-child::after {
+    content: "\f3cd";
+    font-size: 1.3rem;
+}
+.helper__list:nth-child(2)::after {
+    content:"\f0ca";
+}
+.helper__list:last-child::after {
+    content:"\f54e";
 }
