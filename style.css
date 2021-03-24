@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* variables*/
+/* functions*/
 /* Reset some basic automatic style */
 html {
   scroll-behavior: smooth;
@@ -31,8 +32,9 @@ img {
   max-width: 100%;
 }
 
-button {
-  /* background-color: inherit; */
+button,
+input {
+  background-color: transparent;
   outline: none;
   border: none;
   cursor: pointer;
@@ -67,13 +69,10 @@ p {
   font-weight: 300;
 }
 
-button {
+button,
+input {
   font-size: 16px;
-  /* font-weight: 400; */
-}
-
-span {
-  background-color: lawngreen;
+  font-weight: bold;
 }
 
 footer h3 {
@@ -96,6 +95,17 @@ div {
   background-color: #94ecc0;
 }
 
+.hero__search {
+  background-color: #b82d57;
+}
+.hero__search input {
+  background-color: cornflowerblue;
+}
+
+span {
+  background-color: lawngreen;
+}
+
 .main_header {
   height: 4rem;
   display: flex;
@@ -104,6 +114,36 @@ div {
   /* .return-btn {
 
   } */
+}
+
+/* Main*/
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+}
+.hero h2 {
+  margin: 0 3rem;
+}
+.hero__description {
+  padding: 2.5rem 0;
+}
+
+.hero__search {
+  background-color: #eaeaea;
+  width: 100%;
+  padding: 0.85rem;
+  margin: 0;
+  opacity: 0.7;
+}
+.hero__search input {
+  text-align: center;
+  width: 8.6rem;
+  background-color: transparent;
+}
+.hero__search input::placeholder {
+  opacity: 1;
 }
 
 footer {

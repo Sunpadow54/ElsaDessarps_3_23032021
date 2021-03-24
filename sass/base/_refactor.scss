@@ -36,8 +36,9 @@ img {
 
 // links & buttons basic refactor
 
-button {
-	/* background-color: inherit; */
+button,
+input {
+	background-color: transparent;
 	outline: none;
 	border: none;
 	cursor: pointer;
