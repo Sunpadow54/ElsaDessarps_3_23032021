@@ -12,7 +12,10 @@
 		<link rel="stylesheet" href="sass/style.css" />
 		<!-- Fonts google -->
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap&family=Shrikhand&display=swap" rel="stylesheet"> 
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap&family=Shrikhand&display=swap"
+			rel="stylesheet"
+		/>
 		<!-- Font Awesome -->
 		<link
 			rel="stylesheet"
@@ -25,16 +28,16 @@
 		</header>
 		<main>
 			<section class="hero">
-                <div class="hero__description">
-                    <h2>Réservez le menu qui vous convient</h2>
-                    <p>
-                        Découvrez des restaurants d'exception, sélectionnés par nos
-                        soins.
-                    </p>
-                    <button>Explorer nos restaurants</button>
-                </div>
-                <p class="hero__search">
-                    <i class="fas fa-map-marker-alt"></i>
+				<div class="hero__description">
+					<h2>Réservez le menu qui vous convient</h2>
+					<p>
+						Découvrez des restaurants d'exception, sélectionnés par
+						nos soins.
+					</p>
+					<button>Explorer nos restaurants</button>
+				</div>
+				<p class="hero__search">
+					<i class="fas fa-map-marker-alt"></i>
 					<input
 						type="search"
 						name="q"
@@ -46,29 +49,31 @@
 			<aside class="helper">
 				<h2>Fonctionnement</h2>
 				<ol>
-					<li class="helper__list">Choisissez un restaurant
+					<li class="helper__list">
+						Choisissez un restaurant
 						<!-- <button>Choisissez un restaurant</button> -->
 					</li>
-					<li class="helper__list">Composez votre menu
+					<li class="helper__list">
+						Composez votre menu
 						<!-- <button>Composez votre menu</button> -->
 					</li>
-					<li class="helper__list">Dégustez au restaurant
+					<li class="helper__list">
+						Dégustez au restaurant
 						<!-- <button>Dégustez au restaurant</button> -->
 					</li>
 				</ol>
 			</aside>
-			<section>
-				<!-- (ou nav ?) -->
+			<section class="restaurants">
 				<h2>Restaurants</h2>
 				<ul>
 					<li>
-						<article>
-							<header>
+						<article class="restaurant__card">
+							<header class="restaurant__card--info">
 								<h3>La palette du goût</h3>
 								<p>Ménilmontant</p>
 								<button><i class="far fa-heart"></i></button>
 							</header>
-							<a href="">
+							<a href="" class="restaurant__card--img">
 								<img
 									src="img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
 									alt="La palette du goût"
@@ -78,13 +83,13 @@
 						</article>
 					</li>
 					<li>
-						<article>
-							<header>
+						<article class="restaurant__card">
+							<header class="restaurant__card--info">
 								<h3>La note enchantée</h3>
 								<p>Charonne</p>
 								<button><i class="far fa-heart"></i></button>
 							</header>
-							<a href="">
+							<a href="" class="restaurant__card--img">
 								<img
 									src="img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
 									alt="La note enchantée"
@@ -94,34 +99,32 @@
 						</article>
 					</li>
 					<li>
-						<article>
-							<header>
+						<article class="restaurant__card">
+							<header class="restaurant__card--info">
 								<h3>À la française</h3>
 								<p>Cité Rouge</p>
 								<button><i class="far fa-heart"></i></button>
 							</header>
-							<a href="">
+							<a href="" class="restaurant__card--img">
 								<img
 									src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
 									alt="À la française"
 								/>
-								<span></span>
 							</a>
 						</article>
 					</li>
 					<li>
-						<article>
-							<header>
+						<article class="restaurant__card">
+							<header class="restaurant__card--info">
 								<h3>Le délice des sens</h3>
 								<p>Folie-Méricourt</p>
 								<button><i class="far fa-heart"></i></button>
 							</header>
-							<a href="">
+							<a href="" class="restaurant__card--img">
 								<img
 									src="img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
 									alt="Le délice des sens"
 								/>
-								<span></span>
 							</a>
 						</article>
 					</li>
@@ -131,8 +134,12 @@
 		<footer>
 			<h3 class="logo">ohmyfood</h3>
 			<ul>
-				<li class="footer__link--propose"><a href="">Proposer un restaurant</a></li>
-				<li class="footer__link--partenaire"><a href="">Devenir partenaire</a></li>
+				<li class="footer__link--propose">
+					<a href="">Proposer un restaurant</a>
+				</li>
+				<li class="footer__link--partenaire">
+					<a href="">Devenir partenaire</a>
+				</li>
 				<li class="footer__link"><a href="">Mentions légales</a></li>
 				<li class="footer__link"><a href="">Contact</a></li>
 			</ul>
