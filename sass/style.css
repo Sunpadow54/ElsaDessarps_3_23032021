@@ -1,10 +1,10 @@
-@charset "UTF-8";
 /* variables*/
 /* functions*/
 /* Reset some basic automatic style */
 html {
   scroll-behavior: smooth;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 * {
@@ -51,6 +51,7 @@ a {
     scroll-behavior: auto;
   }
 }
+
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -80,7 +81,7 @@ footer h3 {
 }
 
 header {
-  background-color: #9d9de5;
+  background-color: #7f7fc5;
 }
 
 section {
@@ -98,6 +99,7 @@ div {
 .hero__search {
   background-color: #b82d57;
 }
+
 .hero__search input {
   background-color: cornflowerblue;
 }
@@ -116,24 +118,38 @@ li {
 
 .main_header {
   height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   /* .return-btn {
 
-  } */
+        } */
 }
 
-/* Main*/
+/* Main */
 .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
+
 .hero h2 {
   margin: 0 3rem;
 }
+
 .hero__description {
   padding: 2.5rem 0;
 }
@@ -145,11 +161,25 @@ li {
   margin: 0;
   opacity: 0.7;
 }
+
 .hero__search input {
   text-align: center;
   width: 8.6rem;
   background-color: transparent;
 }
+
+.hero__search input::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.hero__search input:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.hero__search input::-ms-input-placeholder {
+  opacity: 1;
+}
+
 .hero__search input::placeholder {
   opacity: 1;
 }
@@ -157,6 +187,7 @@ li {
 .helper {
   padding: 1rem;
 }
+
 .helper ol {
   list-style-type: none;
   padding: 1rem 0;
@@ -164,30 +195,49 @@ li {
 
 .helper__list {
   counter-increment: compteur;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 1rem;
   margin-bottom: 1.55rem;
   height: 4.3rem;
   border-radius: 25px;
 }
+
 .helper__list::before {
   color: white;
   position: relative;
   left: -12px;
   content: counter(compteur);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  order: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   width: 27px;
   height: 27px;
   border-radius: 50%;
   background-color: #9356DC;
   font-size: 0.9rem;
 }
+
 .helper__list::after {
   font-family: "Font Awesome 5 Free";
   font-style: normal;
@@ -201,45 +251,50 @@ li {
   padding-right: 1rem;
   opacity: 0.5;
 }
+
 .helper__list:hover::after {
   opacity: 1;
   color: #9356DC;
 }
+
 .helper__list:active::after {
   opacity: 1;
   color: #9356DC;
 }
 
 .helper__list:first-child::after {
-  content: "";
+  content: "\f3cd";
   font-size: 1.3rem;
 }
 
 .helper__list:nth-child(2)::after {
-  content: "";
+  content: "\f0ca";
 }
 
 .helper__list:last-child::after {
-  content: "";
+  content: "\f54e";
 }
 
 footer {
   padding: 1.5rem;
   background-color: #353535;
 }
+
 footer h3 {
   margin-top: 0;
   color: white;
 }
 
-.footer__link, .footer__link--partenaire, .footer__link--propose {
+.footer__link, .footer__link--propose, .footer__link--partenaire {
   margin: 0.5rem 0;
   color: white;
 }
-.footer__link a, .footer__link--partenaire a, .footer__link--propose a {
+
+.footer__link a, .footer__link--propose a, .footer__link--partenaire a {
   color: inherit;
 }
-.footer__link::before, .footer__link--partenaire::before, .footer__link--propose::before {
+
+.footer__link::before, .footer__link--propose::before, .footer__link--partenaire::before {
   font-family: "Font Awesome 5 Free";
   font-style: normal;
   /* fontawesome recommendation */
@@ -250,19 +305,20 @@ footer h3 {
   font-weight: 900;
   margin-right: 0.7rem;
 }
-.footer__link:hover, .footer__link--partenaire:hover, .footer__link--propose:hover {
+
+.footer__link:hover, .footer__link--propose:hover, .footer__link--partenaire:hover {
   color: #9356DC;
 }
-.footer__link:active, .footer__link--partenaire:active, .footer__link--propose:active {
+
+.footer__link:active, .footer__link--propose:active, .footer__link--partenaire:active {
   color: #9356DC;
 }
 
 .footer__link--propose::before {
-  content: "";
+  content: "\f2e7";
 }
 
 .footer__link--partenaire::before {
-  content: "";
+  content: "\f4c4";
 }
-
 /*# sourceMappingURL=style.css.map */
