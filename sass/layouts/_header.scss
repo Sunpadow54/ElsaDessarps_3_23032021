@@ -1,9 +1,12 @@
 .main_header {
+    position: relative;
     height: 4rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-        /* .return-btn {
-
-        } */
+    padding: 0 $gutters;
+    a {
+        position: absolute;
+        left: $gutters;
+    }
 }

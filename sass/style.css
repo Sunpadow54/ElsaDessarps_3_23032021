@@ -47,7 +47,6 @@ input {
 }
 
 a {
-  width: 100%;
   text-decoration: none;
 }
 
@@ -94,47 +93,60 @@ span {
   font-weight: bold;
 }
 
-/* 
 section {
-    background-color: rgb(228, 185, 172);
+  background-color: #e4b9ac;
 }
+
 button {
-    background-color:khaki;
+  background-color: khaki;
 }
+
 div {
-    background-color: rgb(148, 236, 192);
+  background-color: #94ecc0;
 }
+
 .hero__search {
-    background-color: rgb(184, 45, 87);
-    input {
-        background-color: cornflowerblue;
-    }
+  background-color: #b82d57;
 }
+
+.hero__search input {
+  background-color: cornflowerblue;
+}
+
 span {
-	background-color: lawngreen;
+  background-color: lawngreen;
 }
+
 li {
-    background-color: rgb(243, 162, 243);
+  background-color: #f3a2f3;
 }
+
 ::before {
-    background-color: rgb(150, 150, 150);
+  background-color: #969696;
 }
+
 article {
-    background-color:cyan;
-} */
+  background-color: cyan;
+}
+
 .main_header {
+  position: relative;
   height: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* .return-btn {
+  padding: 0 1.5rem;
+}
 
-        } */
+.main_header a {
+  position: absolute;
+  left: 1.5rem;
 }
 
 /* Main */
