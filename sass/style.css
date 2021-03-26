@@ -129,7 +129,7 @@ article {
   background-color: cyan;
 }
 
-.main_header {
+.main-header {
   position: relative;
   height: 4rem;
   display: -webkit-box;
@@ -144,7 +144,7 @@ article {
   padding: 0 1.5rem;
 }
 
-.main_header a {
+.main-header a {
   position: absolute;
   left: 1.5rem;
 }
