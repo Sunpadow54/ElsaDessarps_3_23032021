@@ -116,9 +116,7 @@
 	padding: $gutters;
 
 	ul {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
+		@include layout-blocs-list;
 	}
     
 	li {

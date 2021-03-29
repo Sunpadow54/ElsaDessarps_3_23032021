@@ -1,7 +1,6 @@
 * {
 	font-family: $font-txt;
 }
-
 .logo,
 .single-restaurant__menu--head > h2
 {
@@ -27,12 +26,23 @@ input {
 	font-weight: bold;
 }
 
+
 footer h3,
-.menu__dish h3 {
+.menu-course h3 {
     font-weight: normal;
 }
-.menu__dish h3 {
+
+.menu-course h3 {
     font-size: 1rem;
+}
+
+.dish__description {
+    h4 {
+        font-size: 1.2rem;
+    }
+    p {
+        font-size: 0.96rem;
+    }
 }
 
 span {
