@@ -1,0 +1,12 @@
+.main-header {
+    position: relative;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 $gutters;
+    &__btn-return {
+        position: absolute;
+        left: $gutters;
+    }
+}   

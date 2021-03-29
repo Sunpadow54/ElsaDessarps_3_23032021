@@ -1,0 +1,11 @@
+{
+  "name": "p3_ohmyfood",
+  "version": "1.0.0",
+  "description": "*Projet de formation n°3 du parcours Développeur Web - Openclassrooms*\r Dynamisez une page web avec des animations Css.",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./style/sass/style.scss:./style/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
