@@ -163,6 +163,53 @@ article {
   left: 1.5rem;
 }
 
+footer {
+  padding: 1.5rem;
+  background-color: #353535;
+}
+
+footer h3 {
+  margin-top: 0;
+  color: white;
+}
+
+.footer__link, .footer__link--propose, .footer__link--partenaire {
+  margin: 0.5rem 0;
+  color: white;
+}
+
+.footer__link a, .footer__link--propose a, .footer__link--partenaire a {
+  color: inherit;
+}
+
+.footer__link::before, .footer__link--propose::before, .footer__link--partenaire::before {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  /* fontawesome recommendation */
+  font-variant: normal;
+  /* fontawesome recommendation */
+  text-rendering: auto;
+  /* fontawesome recommendation */
+  font-weight: 900;
+  margin-right: 0.7rem;
+}
+
+.footer__link:hover, .footer__link--propose:hover, .footer__link--partenaire:hover {
+  color: #9356DC;
+}
+
+.footer__link:active, .footer__link--propose:active, .footer__link--partenaire:active {
+  color: #9356DC;
+}
+
+.footer__link--propose::before {
+  content: "\f2e7";
+}
+
+.footer__link--partenaire::before {
+  content: "\f4c4";
+}
+
 /* Main */
 .hero {
   display: -webkit-box;
@@ -464,52 +511,5 @@ article {
 
 .menu__dish--choice span {
   padding: 0.5rem;
-}
-
-footer {
-  padding: 1.5rem;
-  background-color: #353535;
-}
-
-footer h3 {
-  margin-top: 0;
-  color: white;
-}
-
-.footer__link, .footer__link--propose, .footer__link--partenaire {
-  margin: 0.5rem 0;
-  color: white;
-}
-
-.footer__link a, .footer__link--propose a, .footer__link--partenaire a {
-  color: inherit;
-}
-
-.footer__link::before, .footer__link--propose::before, .footer__link--partenaire::before {
-  font-family: "Font Awesome 5 Free";
-  font-style: normal;
-  /* fontawesome recommendation */
-  font-variant: normal;
-  /* fontawesome recommendation */
-  text-rendering: auto;
-  /* fontawesome recommendation */
-  font-weight: 900;
-  margin-right: 0.7rem;
-}
-
-.footer__link:hover, .footer__link--propose:hover, .footer__link--partenaire:hover {
-  color: #9356DC;
-}
-
-.footer__link:active, .footer__link--propose:active, .footer__link--partenaire:active {
-  color: #9356DC;
-}
-
-.footer__link--propose::before {
-  content: "\f2e7";
-}
-
-.footer__link--partenaire::before {
-  content: "\f4c4";
 }
 /*# sourceMappingURL=style.css.map */
