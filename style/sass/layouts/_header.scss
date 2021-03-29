@@ -1,12 +1,22 @@
 .main-header {
-    position: relative;
-    height: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 $gutters;
-    &__btn-return {
-        position: absolute;
-        left: $gutters;
-    }
-}   
+	position: relative;
+	height: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 $gutters;
+
+	&__btn-return {
+		position: absolute;
+		left: $gutters;
+		font-size: 0px; // make the txt disappear --> icon
+		color: transparent; // make the txt disappear --> icon
+
+		&::before {
+			@include icons-b-standard;
+			content: "\f060";
+			color: $color-bg-footer;
+			font-size: 1.3rem;
+		}
+	}
+}

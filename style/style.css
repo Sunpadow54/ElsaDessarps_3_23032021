@@ -150,6 +150,21 @@ article {
 .main-header__btn-return {
   position: absolute;
   left: 1.5rem;
+  font-size: 0px;
+  color: transparent;
+}
+.main-header__btn-return::before {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  /* fontawesome recommendation */
+  font-variant: normal;
+  /* fontawesome recommendation */
+  text-rendering: auto;
+  /* fontawesome recommendation */
+  font-weight: 900;
+  content: "";
+  color: #353535;
+  font-size: 1.3rem;
 }
 
 footer {
@@ -379,6 +394,7 @@ footer h3 {
   border-bottom: 3px solid #99E2D0;
   width: 10%;
   padding: 0.4rem 0;
+  color: #353535;
 }
 .menu-course ul {
   display: flex;
@@ -401,6 +417,7 @@ footer h3 {
   height: inherit;
   align-self: flex-end;
   padding: 0.8rem 1.5rem;
+  color: #353535;
 }
 .dish__btn-choose {
   width: 3.6rem;
