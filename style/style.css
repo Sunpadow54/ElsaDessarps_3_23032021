@@ -296,6 +296,9 @@ footer h3 {
   padding-right: 1rem;
   opacity: 0.5;
 }
+.helper__list:hover {
+  background-color: #f2eafb;
+}
 .helper__list:hover::after {
   opacity: 1;
   color: #9356dc;
@@ -379,7 +382,7 @@ footer h3 {
   padding: 0.4rem 1rem;
   margin: 1rem;
   background-color: #99e2d0;
-  color: #278870;
+  color: #2c9c81;
 }
 
 /* Restaurant Menus page */

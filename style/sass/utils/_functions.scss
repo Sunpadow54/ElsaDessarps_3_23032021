@@ -3,10 +3,10 @@
 // -----------------------------------------------------------
 
 // colors Tones
-@function tone-color($color, $shade) {
-    @if (lightness($color) > 50%) {
-        @return darken($color, 40%);
-    }
+@function tone-color($color, $tone) {
+	@if (lightness($color) > 60%) {
+		@return darken($color, map-get($brightness, $tone));
+	}
 
-	@return lighten($color, map-get($brightness, $shade));
+	@return lighten($color, map-get($brightness, $tone));
 }

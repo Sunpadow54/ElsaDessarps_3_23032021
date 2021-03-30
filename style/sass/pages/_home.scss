@@ -20,9 +20,9 @@
 
 	&__description {
 		padding: 2.5rem 0;
-        p {
-            color: tone-color($color-canvas, dark);
-        }
+		p {
+			color: tone-color($color-canvas, dark);
+		}
 	}
 }
 
@@ -56,9 +56,9 @@
 }
 
 .helper__list {
-    @include shadows;
+	@include shadows;
 
-    background-color: tone-color($color-canvas, light);
+	background-color: tone-color($color-canvas, light);
 	counter-increment: compteur;
 	display: flex;
 	flex-direction: row-reverse;
@@ -79,13 +79,13 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-        font-size: 0.9rem;
+		font-size: 0.9rem;
 		order: 1;
 		width: 27px;
 		height: 27px;
 		border-radius: 50%;
 		background-color: $color-primary;
-        color:white;
+		color: white;
 	}
 
 	//icons
@@ -97,7 +97,10 @@
 		opacity: 0.5;
 	}
 
-	// hover/active change the icons
+	// hover/active changes
+	&:hover {
+		background-color: tone-color($color-primary, medium);
+	}
 	&:hover::after {
 		opacity: 1;
 		color: $color-primary;
@@ -135,8 +138,8 @@
 }
 
 .restaurant__card {
-    @include shadows;
-    
+	@include shadows;
+
 	display: flex;
 	flex-direction: column-reverse;
 	border-radius: 25px;
@@ -189,6 +192,6 @@
 		padding: 0.4rem 1rem;
 		margin: 1rem;
 		background-color: $color-third;
-        color: tone-color($color-third, 50%);
+		color: tone-color($color-third, medium);
 	}
 }
