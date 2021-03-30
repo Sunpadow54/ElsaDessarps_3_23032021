@@ -4,7 +4,7 @@
 
 /* Main */
 .single-restaurant {
-	background-color: tone-color($color-canvas, medium);
+	background-color: tone-color($color-canvas, soft-light);
 	img {
 		height: 17rem;
 		z-index: -1;
@@ -15,7 +15,7 @@
 	margin-top: -3.3rem;
 	padding: $gutters;
 	border-radius: 40px 40px 0 0;
-	background-color: rgb(248, 241, 229);
+	background-color: tone-color($color-canvas, light);
 
 	&--head {
 		display: flex;
