@@ -8,5 +8,5 @@
         @return darken($color, 40%);
     }
 
-	@return lighten($color, map-get($light-percent, $shade));
+	@return lighten($color, map-get($brightness, $shade));
 }

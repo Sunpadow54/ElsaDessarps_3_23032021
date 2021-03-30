@@ -27,7 +27,7 @@
 }
 
 .hero__search {
-	background-color: tone-color($color-canvas, medium);
+	background-color: tone-color($color-canvas, soft-light);
 	width: 100%;
 	padding: 0.85rem;
 	margin: 0;
@@ -56,6 +56,8 @@
 }
 
 .helper__list {
+    @include shadows;
+
     background-color: tone-color($color-canvas, light);
 	counter-increment: compteur;
 	display: flex;
@@ -133,6 +135,8 @@
 }
 
 .restaurant__card {
+    @include shadows;
+    
 	display: flex;
 	flex-direction: column-reverse;
 	border-radius: 25px;

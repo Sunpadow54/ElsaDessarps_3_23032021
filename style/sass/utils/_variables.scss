@@ -11,15 +11,14 @@ $color-third: #99e2d0;
 $color-canvas: #000000;
 
 // lightness hvl
-$light-percent: (
+$brightness: (
 	light: 96%,
-	medium: 90%,
+	soft-light: 90%,
+    medium:84%,
 	dark: 21%,
 );
 
-/* $color-bg-footer: #353535; */ // ? need to change name
-
-// font
+// font style
 $font-logo: "Shrikhand", cursive;
 $font-txt: "Roboto", sans-serif;
 
