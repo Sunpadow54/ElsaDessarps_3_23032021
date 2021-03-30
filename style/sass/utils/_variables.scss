@@ -2,19 +2,26 @@
 /* variables*/
 // -----------------------------------------------------------
 
+// colors brand
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-third: #99e2d0;
 
-// colors
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-third: #99E2D0;
+//colors standard
+$color-canvas: #000000;
 
-$color-fourth: #eaeaea;
+// lightness hvl
+$light-percent: (
+	light: 96%,
+	medium: 90%,
+	dark: 21%,
+);
 
-$color-bg-footer: #353535; // ? need to change name
+/* $color-bg-footer: #353535; */ // ? need to change name
 
 // font
-$font-logo:'Shrikhand', cursive;
-$font-txt: 'Roboto', sans-serif;
+$font-logo: "Shrikhand", cursive;
+$font-txt: "Roboto", sans-serif;
 
 // gutters
 $gutters: 1.5rem;

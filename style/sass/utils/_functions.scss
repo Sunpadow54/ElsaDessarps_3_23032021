@@ -2,10 +2,11 @@
 /* functions*/
 // -----------------------------------------------------------
 
-// to constrast text color in comparison to the background color
-@function color-txt-switch($bg-color) {
-	@if (lightness($bg-color) < 80%) {
-		@return white;
-	}
-	@return black;
+// colors Tones
+@function tone-color($color, $shade) {
+    @if (lightness($color) > 50%) {
+        @return darken($color, 40%);
+    }
+
+	@return lighten($color, map-get($light-percent, $shade));
 }

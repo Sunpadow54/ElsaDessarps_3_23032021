@@ -1,16 +1,18 @@
 footer {
     padding: $gutters;
-	background-color: $color-bg-footer;
+	background-color: tone-color($color-canvas, dark);
 	h3 {
         margin-top:0;
-		@include txt-color($color-bg-footer);
+		/* @include txt-color(tone-color($color-canvas, 21%)); */
+        color:white;
 	}
 }
 
 // links nav in the footer
 .footer__link {
     margin: 0.5rem 0;
-    @include txt-color($color-bg-footer);
+    /* @include txt-color(tone-color($color-canvas, 21%)); */
+    color:white;
     a {
         color:inherit;
     }

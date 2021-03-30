@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* variables*/
+/* $color-bg-footer: #353535; */
 /* functions*/
 /* Reset some basic automatic style */
 html {
@@ -163,21 +164,23 @@ article {
   /* fontawesome recommendation */
   font-weight: 900;
   content: "";
-  color: #353535;
+  color: #363636;
   font-size: 1.3rem;
 }
 
 footer {
   padding: 1.5rem;
-  background-color: #353535;
+  background-color: #363636;
 }
 footer h3 {
   margin-top: 0;
+  /* @include txt-color(tone-color($color-canvas, 21%)); */
   color: white;
 }
 
 .footer__link, .footer__link--partenaire, .footer__link--propose {
   margin: 0.5rem 0;
+  /* @include txt-color(tone-color($color-canvas, 21%)); */
   color: white;
 }
 .footer__link a, .footer__link--partenaire a, .footer__link--propose a {
@@ -195,10 +198,10 @@ footer h3 {
   margin-right: 0.7rem;
 }
 .footer__link:hover, .footer__link--partenaire:hover, .footer__link--propose:hover {
-  color: #9356DC;
+  color: #9356dc;
 }
 .footer__link:active, .footer__link--partenaire:active, .footer__link--propose:active {
-  color: #9356DC;
+  color: #9356dc;
 }
 
 .footer__link--propose::before {
@@ -209,8 +212,10 @@ footer h3 {
   content: "";
 }
 
-/* Main */
+/* Index html */
 .hero {
+  /*  background-color: lighten-color(96%); */
+  background-color: whitesmoke;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -222,9 +227,12 @@ footer h3 {
 .hero__description {
   padding: 2.5rem 0;
 }
+.hero__description p {
+  color: #363636;
+}
 
 .hero__search {
-  background-color: #eaeaea;
+  background-color: #e6e6e6;
   width: 100%;
   padding: 0.85rem;
   margin: 0;
@@ -248,6 +256,7 @@ footer h3 {
 }
 
 .helper__list {
+  background-color: whitesmoke;
   counter-increment: compteur;
   display: flex;
   flex-direction: row-reverse;
@@ -256,22 +265,23 @@ footer h3 {
   margin-left: 1rem;
   margin-bottom: 1.55rem;
   height: 4.3rem;
-  border-radius: 25px;
+  border-radius: 20px;
 }
 .helper__list::before {
-  color: white;
+  color: color-txt-switch(#9356dc);
   position: relative;
   left: -12px;
   content: counter(compteur);
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 0.9rem;
   order: 1;
   width: 27px;
   height: 27px;
   border-radius: 50%;
-  background-color: #9356DC;
-  font-size: 0.9rem;
+  background-color: #9356dc;
+  color: white;
 }
 .helper__list::after {
   font-family: "Font Awesome 5 Free";
@@ -288,11 +298,11 @@ footer h3 {
 }
 .helper__list:hover::after {
   opacity: 1;
-  color: #9356DC;
+  color: #9356dc;
 }
 .helper__list:active::after {
   opacity: 1;
-  color: #9356DC;
+  color: #9356dc;
 }
 
 .helper__list:first-child::after {
@@ -310,6 +320,7 @@ footer h3 {
 
 .restaurants {
   padding: 1.5rem;
+  background-color: whitesmoke;
 }
 .restaurants ul {
   display: flex;
@@ -366,10 +377,15 @@ footer h3 {
   align-self: start;
   padding: 0.4rem 1rem;
   margin: 1rem;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
+  color: #278870;
 }
 
 /* Restaurant Menus page */
+/* Main */
+.single-restaurant {
+  background-color: #e6e6e6;
+}
 .single-restaurant img {
   height: 17rem;
   z-index: -1;
@@ -391,10 +407,10 @@ footer h3 {
 .menu-course h3 {
   text-transform: uppercase;
   font-weight: 300;
-  border-bottom: 3px solid #99E2D0;
+  border-bottom: 3px solid #99e2d0;
   width: 10%;
   padding: 0.4rem 0;
-  color: #353535;
+  color: #363636;
 }
 .menu-course ul {
   display: flex;
@@ -417,11 +433,11 @@ footer h3 {
   height: inherit;
   align-self: flex-end;
   padding: 0.8rem 1.5rem;
-  color: #353535;
+  color: #363636;
 }
 .dish__btn-choose {
   width: 3.6rem;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   padding: 0;
 }
 .dish__btn-choose i {

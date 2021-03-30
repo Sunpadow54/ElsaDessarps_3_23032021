@@ -1,10 +1,14 @@
 // -----------------------------------------------------------
-/* Main */
+/* Index html */
 // -----------------------------------------------------------
+
+// MAiN
 
 // -----------  Banner (info + search)
 
 .hero {
+	/*  background-color: lighten-color(96%); */
+	background-color: tone-color($color-canvas, light);
 	display: flex;
 	flex-direction: column-reverse;
 	align-items: center;
@@ -16,11 +20,14 @@
 
 	&__description {
 		padding: 2.5rem 0;
+        p {
+            color: tone-color($color-canvas, dark);
+        }
 	}
 }
 
 .hero__search {
-	background-color: $color-fourth;
+	background-color: tone-color($color-canvas, medium);
 	width: 100%;
 	padding: 0.85rem;
 	margin: 0;
@@ -37,7 +44,6 @@
 	}
 }
 
-
 // ----------- Aside : Helper
 
 .helper {
@@ -50,6 +56,7 @@
 }
 
 .helper__list {
+    background-color: tone-color($color-canvas, light);
 	counter-increment: compteur;
 	display: flex;
 	flex-direction: row-reverse;
@@ -58,7 +65,7 @@
 	margin-left: 1rem;
 	margin-bottom: 1.55rem;
 	height: 4.3rem;
-	border-radius: 25px;
+	border-radius: 20px;
 
 	//numbers
 	&::before {
@@ -70,12 +77,13 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+        font-size: 0.9rem;
 		order: 1;
 		width: 27px;
 		height: 27px;
 		border-radius: 50%;
 		background-color: $color-primary;
-		font-size: 0.9rem;
+        color:white;
 	}
 
 	//icons
@@ -114,11 +122,11 @@
 
 .restaurants {
 	padding: $gutters;
-
+	background-color: tone-color($color-canvas, light);
 	ul {
 		@include layout-blocs-list;
 	}
-    
+
 	li {
 		height: 15.75rem;
 	}
@@ -177,5 +185,6 @@
 		padding: 0.4rem 1rem;
 		margin: 1rem;
 		background-color: $color-third;
+        color: tone-color($color-third, 50%);
 	}
 }

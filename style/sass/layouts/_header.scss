@@ -15,7 +15,7 @@
 		&::before {
 			@include icons-b-standard;
 			content: "\f060";
-			color: $color-bg-footer;
+			color: tone-color($color-canvas, dark);
 			font-size: 1.3rem;
 		}
 	}
