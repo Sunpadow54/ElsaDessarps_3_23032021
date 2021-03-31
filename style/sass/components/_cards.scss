@@ -1,0 +1,8 @@
+.cards {
+    @include shadows;
+
+    display: flex;
+	background-color: white;
+	border-radius: 15px;
+	overflow: hidden;
+}

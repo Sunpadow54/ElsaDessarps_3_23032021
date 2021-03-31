@@ -24,6 +24,8 @@
 		justify-content: space-between;
 	}
 	&--order {
+        @extend .btn-brand;
+        
 		align-self: center;
 		margin: 2.6rem 0 2rem 0;
 	}
@@ -45,12 +47,7 @@
 }
 
 .dish {
-	@include shadows;
-
-	display: flex;
-	background-color: white;
-	border-radius: 15px;
-	overflow: hidden;
+    @extend .cards;
 
 	&__description {
 		padding: 0.8rem 0 0.8rem 0.8rem;

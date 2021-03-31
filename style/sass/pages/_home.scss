@@ -25,6 +25,7 @@
 		}
 
 		button {
+            @extend .btn-brand;
 			margin: 0.5rem;
 		}
 	}
@@ -146,12 +147,9 @@
 }
 
 .restaurant__card {
-	@include shadows;
+    @extend .cards;
 
-	display: flex;
 	flex-direction: column-reverse;
-	border-radius: 15px;
-	overflow: hidden;
 	height: inherit;
 }
 
