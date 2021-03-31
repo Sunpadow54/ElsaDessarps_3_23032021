@@ -64,3 +64,13 @@ a {
 		scroll-behavior: auto;
 	}
 }
+
+
+.hero__search{
+    box-sizing: border-box;
+}
+
+// colors txts
+p:not(.helper__list p) {
+    color: tone-color($color-canvas, dark);
+}

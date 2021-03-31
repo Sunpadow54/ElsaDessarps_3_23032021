@@ -7,7 +7,6 @@
 // -----------  Banner (info + search)
 
 .hero {
-	/*  background-color: lighten-color(96%); */
 	background-color: tone-color($color-canvas, light);
 	display: flex;
 	flex-direction: column-reverse;
@@ -28,15 +27,22 @@
 
 .hero__search {
 	background-color: tone-color($color-canvas, soft-light);
+	box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.15);
 	width: 100%;
-	padding: 0.85rem;
+	padding: 0.9rem;
 	margin: 0;
-	opacity: 0.7;
+
+	i {
+		color: tone-color($color-canvas, dark);
+		/* opacity: 0.7; */
+	}
 
 	input {
+		color: tone-color($color-canvas, dark);
 		text-align: center;
 		width: 8.6rem;
 		background-color: transparent;
+		/* opacity: 0.7; */
 
 		&::placeholder {
 			opacity: 1;
@@ -57,23 +63,23 @@
 
 .helper__list {
 	@include shadows;
-
-	background-color: tone-color($color-canvas, light);
-	counter-increment: compteur;
-	display: flex;
+    position: relative;
+    display: flex;
 	flex-direction: row-reverse;
 	justify-content: flex-end;
 	align-items: center;
+    counter-increment: compteur;
 	margin-left: 1rem;
 	margin-bottom: 1.55rem;
 	height: 4.3rem;
 	border-radius: 20px;
+    background-color: tone-color($color-canvas, light);
 
-	//numbers
+	// helpers numbers
 	&::before {
 		@include txt-color($color-primary);
 
-		position: relative;
+		position: absolute;
 		left: -12px;
 		content: counter(compteur);
 		display: flex;
@@ -88,30 +94,27 @@
 		color: white;
 	}
 
-	//icons
+	// helpers icons
 	&::after {
 		@include icons-b-standard;
-
-		padding: 0.2rem;
-		padding-right: 1rem;
+        
+        padding: 0 1.5rem 0 2.25rem;
 		opacity: 0.5;
 	}
 
 	// hover/active changes
-	&:hover {
+	&:hover,
+	&:active {
 		background-color: tone-color($color-primary, medium);
 	}
-	&:hover::after {
-		opacity: 1;
-		color: $color-primary;
-	}
-
+	&:hover::after,
 	&:active::after {
 		opacity: 1;
 		color: $color-primary;
 	}
 }
 
+// icons contents -> fontawesome
 .helper__list:first-child::after {
 	content: "\f3cd";
 	font-size: 1.3rem;
@@ -123,7 +126,7 @@
 	content: "\f54e";
 }
 
-// Restaurants
+// ----------- Restaurants
 
 .restaurants {
 	padding: $gutters;

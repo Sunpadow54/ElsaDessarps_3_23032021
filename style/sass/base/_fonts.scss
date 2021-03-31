@@ -1,44 +1,34 @@
+// ---------- Fonts Family ----------
+
 * {
 	font-family: $font-txt;
 }
+
 .logo,
 .single-restaurant__menu--head > h2
 {
 	font-family: $font-logo;
-    font-weight: normal;
 }
 
-h2 {
-    font-weight: bold;
-}
 
-p {
-	font-size: 16px;
-	font-weight: 300;
-}
-.hero__description p {
-    font-size: 18px;
-}
 
+// ---------- Fonts Sizes ----------
+
+
+p,
 button,
-input {
-	font-size: 16px;
-	font-weight: bold;
-}
-
-
-footer h3,
-.menu-course h3 {
-    font-weight: normal;
-}
-
+input,
 .menu-course h3 {
     font-size: 1rem;
 }
 
+.hero__description p {
+    font-size: 1.125rem;
+}
+
 .dish__description {
     h4 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     p {
         font-size: 0.96rem;
@@ -47,9 +37,39 @@ footer h3,
 
 span {
     font-size: 0.9rem;
-    font-weight: bold;
 }
 
 .single-restaurant__menu--head > h2 {
     font-size: 1.74em;
+}
+
+
+
+// ---------- Fonts Weight ----------
+
+
+.logo,
+.single-restaurant__menu--head h2,
+footer h3,
+.menu-course h3 {
+    font-weight: normal;
+}
+
+h2,
+input,
+.dish__price {
+    font-weight: bold;
+}
+
+.hero__search input,
+.helper__list p,
+.restaurant__card--img span,
+.dish__description h4,
+button
+ {
+    font-weight: 500;
+}
+
+p {
+    font-weight: 300;
 }
