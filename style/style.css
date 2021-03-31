@@ -242,6 +242,9 @@ footer h3 {
 .hero__description p {
   color: #363636;
 }
+.hero__description button {
+  margin: 0.5rem;
+}
 
 .hero__search {
   background-color: #e6e6e6;
@@ -353,7 +356,7 @@ footer h3 {
   box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column-reverse;
-  border-radius: 25px;
+  border-radius: 15px;
   overflow: hidden;
   height: inherit;
 }
@@ -413,6 +416,8 @@ footer h3 {
 .single-restaurant__menu {
   position: relative;
   /* to fix the background transparent with negativ margin */
+  display: flex;
+  flex-direction: column;
   margin-top: -3.3rem;
   padding: 1.5rem;
   border-radius: 40px 40px 0 0;
@@ -421,6 +426,10 @@ footer h3 {
 .single-restaurant__menu--head {
   display: flex;
   justify-content: space-between;
+}
+.single-restaurant__menu--order {
+  align-self: center;
+  margin: 2.6rem 0 2rem 0;
 }
 
 .menu-course h3 {
@@ -441,7 +450,7 @@ footer h3 {
   box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.15);
   display: flex;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
 }
 .dish__description {
@@ -483,6 +492,18 @@ footer h3 {
   text-overflow: ellipsis;
   white-space: nowrap;
   margin: 0;
+}
+
+.btn-brand {
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
+  height: 3.2rem;
+  min-width: 12rem;
+  color: white;
+  border-radius: 50px;
+  padding: 0 1.5rem;
+  white-space: nowrap;
+  background-color: #9356dc;
+  background: linear-gradient(356deg, #9356dc, #ff79da);
 }
 
 /*# sourceMappingURL=style.css.map */

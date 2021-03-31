@@ -12,6 +12,8 @@
 }
 .single-restaurant__menu {
 	position: relative; /* to fix the background transparent with negativ margin */
+	display: flex;
+	flex-direction: column;
 	margin-top: -3.3rem;
 	padding: $gutters;
 	border-radius: 40px 40px 0 0;
@@ -21,6 +23,10 @@
 		display: flex;
 		justify-content: space-between;
 	}
+	&--order {
+		align-self: center;
+		margin: 2.6rem 0 2rem 0;
+	}
 }
 
 .menu-course {
@@ -28,9 +34,9 @@
 		text-transform: uppercase;
 		font-weight: 300;
 		color: tone-color($color-canvas, dark);
-        border-bottom: 3px solid $color-third;
-        width: 2.375rem;;
-        line-height: 1.75rem;;
+		border-bottom: 3px solid $color-third;
+		width: 2.375rem;
+		line-height: 1.75rem;
 	}
 
 	ul {
@@ -39,16 +45,16 @@
 }
 
 .dish {
-    @include shadows;
-    
+	@include shadows;
+
 	display: flex;
 	background-color: white;
-	border-radius: 20px;
+	border-radius: 15px;
 	overflow: hidden;
 
 	&__description {
 		padding: 0.8rem 0 0.8rem 0.8rem;
-		flex: 1 ;
+		flex: 1;
 	}
 
 	&__price {
@@ -60,7 +66,7 @@
 	}
 
 	&__btn-choose {
-        width: 0px;
+		width: 0px;
 		background-color: $color-third;
 		padding: 0;
 		// icon dish select
@@ -70,9 +76,9 @@
 		}
 	}
 
-    &:hover > .dish__btn-choose {
-        width: 3.6rem;
-    }
+	&:hover > .dish__btn-choose {
+		width: 3.6rem;
+	}
 }
 
 .dish__description {

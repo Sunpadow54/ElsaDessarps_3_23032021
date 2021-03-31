@@ -1,0 +1,12 @@
+.btn-brand {
+	@include shadows(0.3);
+
+	height: 3.2rem;
+    min-width: 12rem;
+	color: white;
+	border-radius: 50px;
+	padding: 0 1.5rem;
+    white-space: nowrap;
+	background-color: $color-primary;
+	background: linear-gradient(356deg, $color-primary, $color-secondary);
+}
