@@ -66,15 +66,25 @@
 		width: 0px;
 		background-color: $color-third;
 		padding: 0;
+        // animation appearance btn
+        transition: width 0.27s linear;
+
 		// icon dish select
 		i {
 			color: white;
 			font-size: 1.4rem;
+            // animation rotate icon
+            transition: transform 0.45s ease-in-out;
+            transform: rotate(0deg);
 		}
 	}
 
 	&:hover > .dish__btn-choose {
 		width: 3.6rem;
+
+        i {
+            transform: rotate(360deg);
+        }
 	}
 }
 
