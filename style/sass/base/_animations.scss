@@ -1,0 +1,23 @@
+@keyframes filling-heart {
+	0% {
+		background-position: center 27px;
+		transform: scale(1);
+	}
+	58% {
+		background-position: center 0px;
+		-webkit-text-stroke-color: rgba(0, 0, 0, 1);
+		transform: scale(1);
+	}
+	60% {
+		-webkit-text-stroke-color: rgba(0, 0, 0, 0);
+		transform: scale(1.2);
+	}
+	80% {
+		transform: scale(1.15);
+	}
+	100% {
+		background-position: center 0px;
+		-webkit-text-stroke-color: rgba(0, 0, 0, 0);
+		transform: scale(1.1);
+	}
+}

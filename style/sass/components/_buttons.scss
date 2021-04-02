@@ -9,4 +9,48 @@
 	white-space: nowrap;
 	background-color: $color-primary;
 	background: linear-gradient(356deg, $color-primary, $color-secondary);
+	/* animation */
+	transform: scale(1);
+	opacity: 1;
+	transition: all 0.05s ease-in-out;
+	transform-origin: 50% 50%;
+
+	&:hover {
+		transform: scale(0.98);
+		opacity: 0.8;
+	}
+
+	&:active {
+		transform: scale(1.03);
+		opacity: 0.8;
+	}
+}
+
+.btn-heart {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 25px;
+	width: auto;
+	font-size: 1.5rem;
+	padding: 0 0.3rem;
+	/* background */
+	color: $color-primary;
+	background: linear-gradient(210deg, $color-primary, $color-secondary);
+	background-repeat: no-repeat;
+	background-position: center 27px; /* move the backgound out of the box */
+	/* negativ effet */
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	/* border around txt */
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: rgba(0, 0, 0, 1);
+	/* animation scale*/
+	transform-origin: top;
+	transform: scale(1);
+
+	&:hover {
+		animation: filling-heart 0.7s ease-in-out forwards;
+	}
 }

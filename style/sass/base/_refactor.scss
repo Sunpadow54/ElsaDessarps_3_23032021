@@ -9,6 +9,7 @@ html {
 
 * {
 	color: black;
+    box-sizing: border-box;
 }
 
 body {
@@ -50,6 +51,7 @@ input {
 	outline: none;
 	border: none;
 	cursor: pointer;
+    padding: 0;
 }
 
 a {

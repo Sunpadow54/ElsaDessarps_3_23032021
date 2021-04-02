@@ -9,6 +9,7 @@ html {
 
 * {
   color: black;
+  box-sizing: border-box;
 }
 
 body {
@@ -46,6 +47,7 @@ input {
   outline: none;
   border: none;
   cursor: pointer;
+  padding: 0;
 }
 
 a {
@@ -125,6 +127,29 @@ p {
   font-weight: 300;
 }
 
+@keyframes filling-heart {
+  0% {
+    background-position: center 27px;
+    transform: scale(1);
+  }
+  58% {
+    background-position: center 0px;
+    -webkit-text-stroke-color: black;
+    transform: scale(1);
+  }
+  60% {
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0);
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(1.15);
+  }
+  100% {
+    background-position: center 0px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0);
+    transform: scale(1.1);
+  }
+}
 .main-header {
   position: relative;
   height: 4rem;
@@ -332,6 +357,8 @@ footer h3 {
 .restaurant__card--info {
   display: grid;
   grid-template-columns: 1fr auto;
+  /* height: 4.8rem; */
+  /* make the animation work */
   grid-template-areas: "name heart" "text heart";
   gap: 0.2rem;
   padding: 0.85rem;
@@ -348,6 +375,8 @@ footer h3 {
 }
 .restaurant__card--info button {
   grid-area: heart;
+  align-self: center;
+  justify-self: center;
 }
 
 .restaurant__card--img {
@@ -394,6 +423,7 @@ footer h3 {
 .single-restaurant__menu--head {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .single-restaurant__menu--order {
   align-self: center;
@@ -479,6 +509,48 @@ footer h3 {
   white-space: nowrap;
   background-color: #9356dc;
   background: linear-gradient(356deg, #9356dc, #ff79da);
+  /* animation */
+  transform: scale(1);
+  opacity: 1;
+  transition: all 0.05s ease-in-out;
+  transform-origin: 50% 50%;
+}
+.btn-brand:hover, .hero__description button:hover, .single-restaurant__menu--order:hover {
+  transform: scale(0.98);
+  opacity: 0.8;
+}
+.btn-brand:active, .hero__description button:active, .single-restaurant__menu--order:active {
+  transform: scale(1.03);
+  opacity: 0.8;
+}
+
+.btn-heart, .restaurant__card--info button, .single-restaurant__menu--head button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: auto;
+  font-size: 1.5rem;
+  padding: 0 0.3rem;
+  /* background */
+  color: #9356dc;
+  background: linear-gradient(210deg, #9356dc, #ff79da);
+  background-repeat: no-repeat;
+  background-position: center 27px;
+  /* move the backgound out of the box */
+  /* negativ effet */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* border around txt */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  /* animation scale*/
+  transform-origin: top;
+  transform: scale(1);
+}
+.btn-heart:hover, .restaurant__card--info button:hover, .single-restaurant__menu--head button:hover {
+  animation: filling-heart 0.7s ease-in-out forwards;
 }
 
 /*# sourceMappingURL=style.css.map */

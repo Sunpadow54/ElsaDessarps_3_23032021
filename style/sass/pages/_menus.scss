@@ -5,6 +5,7 @@
 /* Main */
 .single-restaurant {
 	background-color: tone-color($color-canvas, soft-light);
+
 	img {
 		height: 17rem;
 		z-index: -1;
@@ -22,10 +23,16 @@
 	&--head {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
+
+		button {
+			@extend .btn-heart;
+		}
 	}
+
 	&--order {
-        @extend .btn-brand;
-        
+		@extend .btn-brand;
+
 		align-self: center;
 		margin: 2.6rem 0 2rem 0;
 	}
@@ -47,7 +54,7 @@
 }
 
 .dish {
-    @extend .cards;
+	@extend .cards;
 
 	&__description {
 		padding: 0.8rem 0 0.8rem 0.8rem;
@@ -66,25 +73,25 @@
 		width: 0px;
 		background-color: $color-third;
 		padding: 0;
-        // animation appearance btn
-        transition: width 0.27s linear;
+		// animation appearance btn
+		transition: width 0.27s linear;
 
 		// icon dish select
 		i {
 			color: white;
 			font-size: 1.4rem;
-            // animation rotate icon
-            transition: transform 0.45s ease-in-out;
-            transform: rotate(0deg);
+			// animation rotate icon
+			transition: transform 0.45s ease-in-out;
+			transform: rotate(0deg);
 		}
 	}
 
 	&:hover > .dish__btn-choose {
 		width: 3.6rem;
 
-        i {
-            transform: rotate(360deg);
-        }
+		i {
+			transform: rotate(360deg);
+		}
 	}
 }
 

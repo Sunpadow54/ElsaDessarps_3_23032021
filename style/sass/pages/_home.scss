@@ -25,7 +25,7 @@
 		}
 
 		button {
-            @extend .btn-brand;
+			@extend .btn-brand;
 			margin: 0.5rem;
 		}
 	}
@@ -147,7 +147,7 @@
 }
 
 .restaurant__card {
-    @extend .cards;
+	@extend .cards;
 
 	flex-direction: column-reverse;
 	height: inherit;
@@ -156,6 +156,7 @@
 .restaurant__card--info {
 	display: grid;
 	grid-template-columns: 1fr auto;
+	/* height: 4.8rem; */ /* make the animation work */
 	grid-template-areas:
 		"name heart"
 		"text heart";
@@ -175,7 +176,11 @@
 	}
 
 	button {
+		@extend .btn-heart;
+
 		grid-area: heart;
+		align-self: center;
+		justify-self: center;
 	}
 }
 
