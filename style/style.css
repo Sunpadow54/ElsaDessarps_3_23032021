@@ -124,6 +124,11 @@ button {
   font-weight: 500;
 }
 
+footer ul li a,
+footer ul li p {
+  font-weight: 400;
+}
+
 p {
   font-weight: 300;
 }
@@ -185,17 +190,14 @@ footer {
 }
 footer h3 {
   margin-top: 0;
-  /* @include txt-color(tone-color($color-canvas, 21%)); */
+}
+footer * {
   color: white;
+  margin: 0;
 }
 
 .footer__link, .footer__link--partenaire, .footer__link--propose {
   margin: 0.5rem 0;
-  /* @include txt-color(tone-color($color-canvas, 21%)); */
-  color: white;
-}
-.footer__link a, .footer__link--partenaire a, .footer__link--propose a {
-  color: inherit;
 }
 .footer__link::before, .footer__link--partenaire::before, .footer__link--propose::before {
   font-family: "Font Awesome 5 Free";
@@ -208,10 +210,10 @@ footer h3 {
   font-weight: 900;
   margin-right: 0.7rem;
 }
-.footer__link:hover, .footer__link--partenaire:hover, .footer__link--propose:hover {
+.footer__link:hover, .footer__link--partenaire:hover, .footer__link--propose:hover, .footer__link:hover a, .footer__link--partenaire:hover a, .footer__link--propose:hover a {
   color: #9356dc;
 }
-.footer__link:active, .footer__link--partenaire:active, .footer__link--propose:active {
+.footer__link:active, .footer__link--partenaire:active, .footer__link--propose:active, .footer__link:active a, .footer__link--partenaire:active a, .footer__link--propose:active a {
   color: #9356dc;
 }
 

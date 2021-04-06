@@ -1,29 +1,35 @@
 footer {
     padding: $gutters;
 	background-color: tone-color($color-canvas, dark);
+
 	h3 {
         margin-top:0;
-		/* @include txt-color(tone-color($color-canvas, 21%)); */
-        color:white;
 	}
+
+    * {
+        color:white;
+        margin:0;
+    }
 }
 
 // links nav in the footer
 .footer__link {
     margin: 0.5rem 0;
-    /* @include txt-color(tone-color($color-canvas, 21%)); */
-    color:white;
-    a {
-        color:inherit;
-    }
+
+    // icons links footer
     &::before {
         @include icons-b-standard;
         margin-right: 0.7rem;
     }
-    &:hover {
+
+    //hover and active
+    &:hover,
+    &:hover a {
         color: $color-primary;
     }
-    &:active {
+
+    &:active,
+    &:active a {
         color: $color-primary;
     }
 }
@@ -35,6 +41,7 @@ footer {
         content: "\f2e7";
     }
 }
+
 .footer__link--partenaire {
     @extend .footer__link;
     &::before {
