@@ -1,6 +1,6 @@
 @charset "UTF-8";
-/* variables*/
 /* functions*/
+/* variables*/
 /* Reset some basic automatic style */
 html {
   scroll-behavior: smooth;
@@ -186,6 +186,8 @@ p {
 
 footer {
   padding: 1.5rem;
+  /* 	background-color: tone-color($color-canvas, dark, lighten); */
+  /*   background-color: darken(white, 80%); */
   background-color: #363636;
 }
 footer h3 {
@@ -239,9 +241,6 @@ footer * {
 .hero__description {
   padding: 2.5rem 0;
 }
-.hero__description p {
-  color: #363636;
-}
 .hero__description button {
   margin: 0.5rem;
 }
@@ -255,14 +254,12 @@ footer * {
 }
 .hero__search i {
   color: #363636;
-  /* opacity: 0.7; */
 }
 .hero__search input {
   color: #363636;
   text-align: center;
   width: 8.6rem;
   background-color: transparent;
-  /* opacity: 0.7; */
 }
 .hero__search input::placeholder {
   opacity: 1;
@@ -405,9 +402,6 @@ footer * {
 
 /* Restaurant Menus page */
 /* Main */
-.single-restaurant {
-  background-color: #e6e6e6;
-}
 .single-restaurant img {
   height: 17rem;
   z-index: -1;
@@ -543,18 +537,16 @@ footer * {
   background-color: #9356dc;
   background: linear-gradient(356deg, #9356dc, #ff79da);
   /* animation */
-  transform: scale(1);
   opacity: 1;
   transition: all 0.05s ease-in-out;
   transform-origin: 50% 50%;
 }
 .btn-brand:hover, .hero__description button:hover, .single-restaurant__menu--form .menu-btn-order:hover {
-  transform: scale(0.98);
-  opacity: 0.8;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(356deg, #a674e2, #ff93e1);
 }
 .btn-brand:active, .hero__description button:active, .single-restaurant__menu--form .menu-btn-order:active {
   transform: scale(1.03);
-  opacity: 0.8;
 }
 
 .btn-heart, .restaurant__card--info button, .single-restaurant__menu--head button {

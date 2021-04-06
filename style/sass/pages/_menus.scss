@@ -4,7 +4,6 @@
 
 /* Main */
 .single-restaurant {
-	background-color: tone-color($color-canvas, soft-light);
 
 	img {
 		height: 17rem;
@@ -16,7 +15,7 @@
 	margin-top: -3.3rem;
 	padding: $gutters;
 	border-radius: 40px 40px 0 0;
-	background-color: tone-color($color-canvas, light);
+    background-color: map-get($color, bg-blocs);
 
 	&--head {
 		display: flex;
@@ -45,7 +44,7 @@
 	h3 {
 		text-transform: uppercase;
 		font-weight: 300;
-		color: tone-color($color-canvas, dark);
+        color: map-get($color, bg-footer-txt);
 		border-bottom: 3px solid $color-third;
 		width: 2.375rem;
 		line-height: 1.75rem;
@@ -71,7 +70,7 @@
 		height: inherit;
 		align-self: flex-end;
 		padding: 0.8rem 1.5rem;
-		color: tone-color($color-canvas, dark);
+        color: map-get($color, bg-footer-txt);
 	}
 
     &__btn {

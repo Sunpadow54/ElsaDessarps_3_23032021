@@ -1,6 +1,8 @@
 footer {
     padding: $gutters;
-	background-color: tone-color($color-canvas, dark);
+/* 	background-color: tone-color($color-canvas, dark, lighten); */
+  /*   background-color: darken(white, 80%); */
+  background-color : map-get($color, bg-footer-txt);
 
 	h3 {
         margin-top:0;

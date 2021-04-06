@@ -10,19 +10,22 @@
 	background-color: $color-primary;
 	background: linear-gradient(356deg, $color-primary, $color-secondary);
 	/* animation */
-	transform: scale(1);
 	opacity: 1;
 	transition: all 0.05s ease-in-out;
 	transform-origin: 50% 50%;
 
 	&:hover {
-		transform: scale(0.98);
-		opacity: 0.8;
+        @include shadows(0.4);
+        
+        background: 
+            linear-gradient(356deg,
+            tone-color($color-primary, 7%, lighten),
+            tone-color($color-secondary, 5%, lighten));
 	}
 
 	&:active {
 		transform: scale(1.03);
-		opacity: 0.8;
+		
 	}
 }
 

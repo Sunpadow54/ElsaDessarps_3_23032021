@@ -75,5 +75,5 @@ a {
 
 // colors txts
 p:not(.helper__list p) {
-    color: tone-color($color-canvas, dark);
+    color: map-get($color, bg-footer-txt);
 }

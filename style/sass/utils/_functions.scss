@@ -2,11 +2,13 @@
 /* functions*/
 // -----------------------------------------------------------
 
-// colors Tones
-@function tone-color($color, $tone) {
-	@if (lightness($color) > 60%) {
-		@return darken($color, map-get($brightness, $tone));
+// colors tone-percents
+@function tone-color($color, $tone-percent, $contrast) {
+	@if ($contrast == darken) {
+		@return darken($color, $tone-percent);
 	}
 
-	@return lighten($color, map-get($brightness, $tone));
+    @if ($contrast == lighten) {
+        @return lighten($color, $tone-percent);
+    }
 }
