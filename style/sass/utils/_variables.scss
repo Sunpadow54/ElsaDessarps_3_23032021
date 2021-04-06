@@ -10,10 +10,10 @@ $color-third: #99e2d0;
 //color standard
 $color-canvas: #000000;
 
-// colors elements 
+// colors elements
 $color: (
-    bg-footer-txt: tone-color($color-canvas, 21%, lighten),
-    bg-blocs: tone-color($color-canvas, 96%, lighten),
+	bg-footer-txt: tone-color($color-canvas, 21%, lighten),
+	bg-blocs: tone-color($color-canvas, 96%, lighten),
 );
 
 // font style
@@ -23,4 +23,5 @@ $font-txt: "Roboto", sans-serif;
 // gutters
 $gutters: 1.5rem;
 
-//
+//border radius
+$border-rad-btn: 50px;

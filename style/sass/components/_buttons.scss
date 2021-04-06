@@ -1,10 +1,11 @@
 .btn-brand {
 	@include shadows(0.3);
 
+	position: relative;
+	color: white;
 	height: 3.2rem;
 	min-width: 12rem;
-	color: white;
-	border-radius: 50px;
+	border-radius: $border-rad-btn;
 	padding: 0 1.5rem;
 	white-space: nowrap;
 	background-color: $color-primary;
@@ -12,18 +13,38 @@
 	/* animation */
 	transition: all 0.05s ease-in-out;
 	transform-origin: 50% 50%;
+	z-index: 1;
 
-	&:hover, &:active {
-        @include shadows(0.4);
-        
-        background: 
-            linear-gradient(356deg,
-            tone-color($color-primary, 7%, lighten),
-            tone-color($color-secondary, 5%, lighten));
+	&:hover,
+	&:active {
+		&::after {
+			opacity: 1;
+		}
 	}
 
 	&:active {
 		transform: scale(0.97);
+	}
+
+	//background color lighter for animation perf
+	&::after {
+		@include shadows(0.32);
+
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border-radius: $border-rad-btn;
+		background: linear-gradient(
+			356deg,
+			tone-color($color-primary, 7%, lighten),
+			tone-color($color-secondary, 5%, lighten)
+		);
+		z-index: -1;
+		opacity: 0;
 	}
 }
 
