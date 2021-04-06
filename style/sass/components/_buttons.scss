@@ -51,6 +51,6 @@
 	transform: scale(1);
 
 	&:hover {
-		animation: filling-heart 0.7s ease-in-out forwards;
+		animation: filling-heart 0.7s cubic-bezier(0.32, 0, 0.71, 0) forwards;
 	}
 }

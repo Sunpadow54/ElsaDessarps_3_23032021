@@ -48,6 +48,7 @@ input {
   border: none;
   cursor: pointer;
   padding: 0;
+  margin: 0;
 }
 
 a {
@@ -413,8 +414,6 @@ footer h3 {
 .single-restaurant__menu {
   position: relative;
   /* to fix the background transparent with negativ margin */
-  display: flex;
-  flex-direction: column;
   margin-top: -3.3rem;
   padding: 1.5rem;
   border-radius: 40px 40px 0 0;
@@ -425,7 +424,11 @@ footer h3 {
   justify-content: space-between;
   align-items: center;
 }
-.single-restaurant__menu--order {
+.single-restaurant__menu--form {
+  display: flex;
+  flex-direction: column;
+}
+.single-restaurant__menu--form .menu-btn-order {
   align-self: center;
   margin: 2.6rem 0 2rem 0;
 }
@@ -444,6 +447,9 @@ footer h3 {
   gap: 1rem;
 }
 
+.dish {
+  position: relative;
+}
 .dish__description {
   padding: 0.8rem 0 0.8rem 0.8rem;
   flex: 1;
@@ -455,22 +461,47 @@ footer h3 {
   padding: 0.8rem 1.5rem;
   color: #363636;
 }
-.dish__btn-choose {
+.dish__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 0px;
+  height: 100%;
+  width: 3.6rem;
+  display: none;
+  z-index: 2;
+  opacity: 0;
+}
+.dish__btn:checked + .dish__btn-img {
+  width: 3.6rem;
+}
+.dish__btn:checked + .dish__btn-img i {
+  transform: rotate(360deg);
+}
+.dish__btn-img {
+  width: 0px;
+  height: inherit;
   background-color: #99e2d0;
   padding: 0;
   transition: width 0.27s linear;
 }
-.dish__btn-choose i {
+.dish__btn-img i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   color: white;
   font-size: 1.4rem;
   transition: transform 0.45s ease-in-out;
   transform: rotate(0deg);
 }
-.dish:hover > .dish__btn-choose {
+.dish:hover > .dish__btn {
+  display: block;
+}
+.dish:hover > .dish__btn-img {
   width: 3.6rem;
 }
-.dish:hover > .dish__btn-choose i {
+.dish:hover > .dish__btn-img i {
   transform: rotate(360deg);
 }
 
@@ -499,7 +530,7 @@ footer h3 {
   overflow: hidden;
 }
 
-.btn-brand, .hero__description button, .single-restaurant__menu--order {
+.btn-brand, .hero__description button, .single-restaurant__menu--form .menu-btn-order {
   box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
   height: 3.2rem;
   min-width: 12rem;
@@ -515,11 +546,11 @@ footer h3 {
   transition: all 0.05s ease-in-out;
   transform-origin: 50% 50%;
 }
-.btn-brand:hover, .hero__description button:hover, .single-restaurant__menu--order:hover {
+.btn-brand:hover, .hero__description button:hover, .single-restaurant__menu--form .menu-btn-order:hover {
   transform: scale(0.98);
   opacity: 0.8;
 }
-.btn-brand:active, .hero__description button:active, .single-restaurant__menu--order:active {
+.btn-brand:active, .hero__description button:active, .single-restaurant__menu--form .menu-btn-order:active {
   transform: scale(1.03);
   opacity: 0.8;
 }
@@ -550,7 +581,7 @@ footer h3 {
   transform: scale(1);
 }
 .btn-heart:hover, .restaurant__card--info button:hover, .single-restaurant__menu--head button:hover {
-  animation: filling-heart 0.7s ease-in-out forwards;
+  animation: filling-heart 0.7s cubic-bezier(0.32, 0, 0.71, 0) forwards;
 }
 
 /*# sourceMappingURL=style.css.map */

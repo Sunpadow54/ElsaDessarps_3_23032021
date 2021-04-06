@@ -13,8 +13,6 @@
 }
 .single-restaurant__menu {
 	position: relative; /* to fix the background transparent with negativ margin */
-	display: flex;
-	flex-direction: column;
 	margin-top: -3.3rem;
 	padding: $gutters;
 	border-radius: 40px 40px 0 0;
@@ -29,14 +27,19 @@
 			@extend .btn-heart;
 		}
 	}
+    &--form {
+        display: flex;
+        flex-direction: column;
 
-	&--order {
-		@extend .btn-brand;
-
-		align-self: center;
-		margin: 2.6rem 0 2rem 0;
-	}
+        .menu-btn-order {
+            @extend .btn-brand;
+        
+            align-self: center;
+            margin: 2.6rem 0 2rem 0;
+        }
+    }
 }
+
 
 .menu-course {
 	h3 {
@@ -56,6 +59,8 @@
 .dish {
 	@extend .cards;
 
+    position: relative;
+
 	&__description {
 		padding: 0.8rem 0 0.8rem 0.8rem;
 		flex: 1;
@@ -69,8 +74,30 @@
 		color: tone-color($color-canvas, dark);
 	}
 
-	&__btn-choose {
+    &__btn {
+            position: absolute;
+            top:0;
+            right: 0;
+            width: 0px;
+            height: 100%;
+            width: 3.6rem;
+            display: none;
+            z-index: 2;
+            opacity: 0;
+
+            &:checked + .dish__btn-img {
+                width: 3.6rem;
+
+                // icon dish select
+                i {
+                    transform: rotate(360deg);
+                }
+            }
+    }
+
+	&__btn-img {
 		width: 0px;
+        height: inherit;
 		background-color: $color-third;
 		padding: 0;
 		// animation appearance btn
@@ -78,6 +105,10 @@
 
 		// icon dish select
 		i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
 			color: white;
 			font-size: 1.4rem;
 			// animation rotate icon
@@ -86,13 +117,18 @@
 		}
 	}
 
-	&:hover > .dish__btn-choose {
-		width: 3.6rem;
+    &:hover > .dish__btn  {
+        display: block;
+    }
 
+	&:hover > .dish__btn-img {
+		width: 3.6rem;
+        // icon dish select
 		i {
 			transform: rotate(360deg);
 		}
 	}
+
 }
 
 .dish__description {
