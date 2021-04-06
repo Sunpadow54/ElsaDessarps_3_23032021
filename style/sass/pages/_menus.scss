@@ -3,6 +3,7 @@
 // -----------------------------------------------------------
 
 /* Main */
+
 .single-restaurant {
 	img {
 		height: 17rem;
@@ -30,10 +31,18 @@
 	&--form {
 		display: flex;
 		flex-direction: column;
+
+		li {
+			// Menus animation
+			opacity: 0;
+			transform: translateY(80px);
+			animation: menu-appearance 0.5s ease-out forwards;
+		}
 	}
 }
 
 // Button Order
+
 .menu-btn-order {
 	align-self: center;
 	display: flex;

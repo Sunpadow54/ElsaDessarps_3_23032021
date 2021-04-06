@@ -1,3 +1,5 @@
+// Hearts animation
+
 @keyframes filling-heart {
 	0% {
 		background-position: center 27px;
@@ -23,3 +25,31 @@
 }
 
 
+// Menus animation
+
+@keyframes menu-appearance {
+	10% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@each $name-course, $nth-course in $menu-courses {
+	//select the course
+	.menu-course:nth-of-type(#{$nth-course}) {
+		@for $i from 1 through 3 {
+			//select the dish + add time for each
+			li:nth-of-type(#{$i}) {
+				animation-delay: $sec + 0.08s;
+			}
+
+			$sec: $sec + 0.08;
+		}
+	}
+
+	$sec: $sec + 0.5; // add some delay for the next section menu-course
+}

@@ -28,7 +28,7 @@
 
 	//background color lighter for animation perf
 	&::after {
-		@include shadows(0.32);
+		@include shadows(0.1);
 
 		content: "";
 		display: block;
@@ -40,8 +40,8 @@
 		border-radius: $border-rad-btn;
 		background: linear-gradient(
 			356deg,
-			tone-color($color-primary, 7%, lighten),
-			tone-color($color-secondary, 5%, lighten)
+			tone-color($color-primary, 8%, lighten),
+			tone-color($color-secondary, 8%, lighten)
 		);
 		z-index: -1;
 		opacity: 0;

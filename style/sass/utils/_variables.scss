@@ -25,3 +25,12 @@ $gutters: 1.5rem;
 
 //border radius
 $border-rad-btn: 50px;
+
+// menu courses and second for menus animation
+$menu-courses: (
+	entrance: 1,
+	main-course: 2,
+	desert: 3,
+);
+
+$sec: 0.5;
