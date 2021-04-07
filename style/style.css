@@ -225,9 +225,14 @@ p {
 
 footer {
   padding: 1.5rem;
-  /* 	background-color: tone-color($color-canvas, dark, lighten); */
-  /*   background-color: darken(white, 80%); */
   background-color: #363636;
+}
+@media screen and (min-width: 480px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 footer h3 {
   margin-top: 0;
@@ -235,6 +240,12 @@ footer h3 {
 footer * {
   color: white;
   margin: 0;
+}
+@media screen and (min-width: 480px) {
+  footer * {
+    max-width: 1000px;
+    width: 100%;
+  }
 }
 
 .footer__link, .footer__link--partenaire, .footer__link--propose {
@@ -307,9 +318,20 @@ footer * {
 .helper {
   padding: 1.5rem;
 }
+@media screen and (min-width: 480px) {
+  .helper {
+    max-width: 500px;
+    margin: auto;
+  }
+}
 .helper ol {
   list-style-type: none;
   padding: 1rem 0;
+}
+@media screen and (min-width: 480px) {
+  .helper ol {
+    padding: 3rem 0;
+  }
 }
 
 .helper__list {
@@ -325,6 +347,7 @@ footer * {
   height: 4.3rem;
   border-radius: 20px;
   background-color: whitesmoke;
+  white-space: nowrap;
 }
 .helper__list::before {
   color: color-txt-switch(#9356dc);
@@ -379,13 +402,43 @@ footer * {
   padding: 1.5rem;
   background-color: whitesmoke;
 }
+@media screen and (min-width: 480px) {
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 480px) {
+  .restaurants h2 {
+    text-align: left;
+    width: 100%;
+    max-width: 1000px;
+  }
+}
 .restaurants ul {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding-bottom: 3rem;
+}
+@media screen and (min-width: 480px) {
+  .restaurants ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2.5rem;
+    max-width: 1000px;
+  }
 }
 .restaurants li {
   height: 15.75rem;
+}
+@media screen and (min-width: 480px) {
+  .restaurants li {
+    height: 18rem;
+    flex: 1 0 calc((1000px - 2.5rem) / 2 );
+  }
 }
 
 .restaurant__card {
@@ -451,32 +504,46 @@ footer * {
   /* to fix the background transparent with negativ margin */
   margin-top: -3.3rem;
   padding: 1.5rem;
+  padding-bottom: 3rem;
   border-radius: 40px 40px 0 0;
   background-color: whitesmoke;
+}
+@media screen and (min-width: 480px) {
+  .single-restaurant__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .single-restaurant__menu--head {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (min-width: 480px) {
+  .single-restaurant__menu--head {
+    text-align: left;
+    width: 100%;
+    max-width: 1000px;
+  }
+}
 .single-restaurant__menu--form {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 480px) {
+  .single-restaurant__menu--form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2.5rem;
+    max-width: 1000px;
+  }
 }
 .single-restaurant__menu--form li {
   opacity: 0;
   transform: translateY(80px);
   animation: menu-appearance 0.5s ease-out forwards;
-}
-
-.menu-btn-order {
-  align-self: center;
-  display: flex;
-  margin: 2.6rem 0 2rem 0;
-}
-.menu-btn-order input {
-  color: inherit;
-  width: 100%;
 }
 
 .menu-course h3 {
@@ -491,6 +558,11 @@ footer * {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+@media screen and (min-width: 480px) {
+  .menu-course {
+    flex: 1 0 calc((1000px - 2.5rem) / 3);
+  }
 }
 
 .dish {
@@ -566,6 +638,24 @@ footer * {
   text-overflow: ellipsis;
   white-space: nowrap;
   margin: 0;
+}
+
+.menu-btn-order {
+  align-self: center;
+  display: flex;
+  margin: 2.6rem 0 2rem 0;
+}
+.menu-btn-order input {
+  color: inherit;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .menu-btn-order {
+    box-sizing: border-box;
+    align-self: flex-end;
+    margin: 0;
+    flex: 1 0 calc((1000px - 2.5rem) / 3);
+  }
 }
 
 .cards, .restaurant__card, .dish {

@@ -1,52 +1,61 @@
 footer {
-    padding: $gutters;
-/* 	background-color: tone-color($color-canvas, dark, lighten); */
-  /*   background-color: darken(white, 80%); */
-  background-color : map-get($color, bg-footer-txt);
+	padding: $gutters;
+	background-color: map-get($color, bg-footer-txt);
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
 	h3 {
-        margin-top:0;
+		margin-top: 0;
 	}
 
-    * {
-        color:white;
-        margin:0;
-    }
+	* {
+		color: white;
+		margin: 0;
+        
+        @include desktop {
+            max-width: $max-width-desk;
+            width: 100%;
+        }
+	}
 }
 
 // links nav in the footer
 .footer__link {
-    margin: 0.5rem 0;
+	margin: 0.5rem 0;
 
-    // icons links footer
-    &::before {
-        @include icons-b-standard;
-        margin-right: 0.7rem;
-    }
+	// icons links footer
+	&::before {
+		@include icons-b-standard;
 
-    //hover and active
-    &:hover,
-    &:hover a {
-        color: $color-primary;
-    }
+		margin-right: 0.7rem;
+	}
 
-    &:active,
-    &:active a {
-        color: $color-primary;
-    }
+	//hover and active
+	&:hover,
+	&:hover a {
+		color: $color-primary;
+	}
+
+	&:active,
+	&:active a {
+		color: $color-primary;
+	}
 }
 
 // Icons links
 .footer__link--propose {
-    @extend .footer__link;
-    &::before {
-        content: "\f2e7";
-    }
+	@extend .footer__link;
+	&::before {
+		content: "\f2e7";
+	}
 }
 
 .footer__link--partenaire {
-    @extend .footer__link;
-    &::before {
-        content: "\f4c4";
-    }
+	@extend .footer__link;
+	&::before {
+		content: "\f4c4";
+	}
 }

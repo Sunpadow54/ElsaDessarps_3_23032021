@@ -31,3 +31,12 @@
 @mixin shadows($opacity:0.15 ) {
     box-shadow: 0px 4px 9px rgba(0,0,0,$opacity);
 }
+
+
+//MediaQueries
+
+@mixin desktop {
+    @media screen and (min-width: 480px) {
+        @content;
+    }
+}
