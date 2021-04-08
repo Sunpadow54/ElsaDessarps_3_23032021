@@ -1,16 +1,12 @@
 // -----------------------------------------------------------
-/* Index html */
+/* HOME */
 // -----------------------------------------------------------
 
-// MAiN
-
-// -----------  Banner (info + search)
+// ------------  BANNER (info + search)
 
 .hero {
+	@include flex(column-reverse, $default, $default, center);
 	background-color: map-get($color, bg-blocs);
-	display: flex;
-	flex-direction: column-reverse;
-	align-items: center;
 	text-align: center;
 
 	h2 {
@@ -18,7 +14,18 @@
 	}
 
 	&__description {
-		padding: 2.5rem 0;
+		padding: 2.5rem $gutters;
+
+		@include desktop {
+			@include flex(column, $default, $default, center);
+			gap: 1rem;
+			padding: 3rem 0;
+
+			p {
+				max-width: 400px;
+				margin: auto;
+			}
+		}
 
 		button {
 			margin: 0.5rem;
@@ -26,6 +33,7 @@
 	}
 }
 
+// Search Location input
 .hero__search {
 	background-color: tone-color($color-canvas, 90%, lighten);
 	box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.15);
@@ -49,48 +57,58 @@
 	}
 }
 
-// ----------- Aside : Helper
+// ------------ HELPER ( Aside )
 
 .helper {
 	padding: $gutters;
-    @include desktop {
-        max-width: 500px;
-        margin: auto;
-    }
+
+	@include desktop {
+		@include flex(column, $default, center, center);
+		gap: $gutters;
+		min-height: 300px;
+	}
+
+	h2 {
+		@include desktop {
+			max-width: $max-width-desk;
+			width: 100%;
+			text-align: left;
+			margin: 0;
+		}
+	}
+
 	ol {
+		@include flex(column, $default, $default, $default);
 		list-style-type: none;
-		padding: 1rem 0;
-        @include desktop {
-            padding: 3rem 0;
-        }
+		margin: 1rem 0 1rem 0.8rem;
+		gap: 1.55rem;
+
+		@include desktop {
+			@include flex(row, wrap, center, center);
+			gap: 2rem;
+			margin: 0;
+			margin-left: 0.8rem;
+		}
 	}
 }
 
 .helper__list {
+	@include flex(row-reverse, $default, flex-end, center);
 	@include shadows;
 	position: relative;
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: flex-end;
-	align-items: center;
 	counter-increment: compteur;
-	margin-left: 1rem;
-	margin-bottom: 1.55rem;
 	height: 4.3rem;
 	border-radius: 20px;
 	background-color: map-get($color, bg-blocs);
-    white-space: nowrap;
+	white-space: nowrap;
+	padding-right: 3rem;
 
 	// helpers numbers
 	&::before {
-		@include txt-color($color-primary);
-
+		@include flex($default, $default, center, center);
 		position: absolute;
 		left: -12px;
 		content: counter(compteur);
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		font-size: 0.9rem;
 		order: 1;
 		width: 27px;
@@ -103,7 +121,6 @@
 	// helpers icons
 	&::after {
 		@include icons-b-standard;
-
 		padding: 0 1.5rem 0 2.25rem;
 		opacity: 0.5;
 	}
@@ -118,9 +135,14 @@
 		opacity: 1;
 		color: $color-primary;
 	}
+
+	@include desktop {
+		margin: 0;
+		min-width: 19rem;
+	}
 }
 
-// icons contents -> fontawesome
+// Icons contents -> fontawesome
 .helper__list:first-child::after {
 	content: "\f3cd";
 	font-size: 1.3rem;
@@ -132,60 +154,58 @@
 	content: "\f54e";
 }
 
-// ----------- Restaurants
+// ------------ RESTAURANTS
 
 .restaurants {
 	padding: $gutters;
 	background-color: map-get($color, bg-blocs);
-    
-    @include desktop {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 
-    h2 {
-        @include desktop {
-            text-align: left;
-            width: 100%;
-            max-width: $max-width-desk;
-        }
-    }
+	@include desktop {
+		@include flex(column, $default, $default, center);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	h2 {
+		@include desktop {
+			text-align: left;
+			width: 100%;
+			max-width: $max-width-desk;
+		}
+	}
+
 	ul {
-		@include layout-blocs-list;
+		@include flex(column, $default, $default, $default);
+        gap:1rem;
+		padding-bottom: 3rem;
 
-        padding-bottom: 3rem;
-
-        @include desktop {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            gap: 2.5rem;
-            max-width: $max-width-desk;
-        }
+		@include desktop {
+			@include flex(row, wrap, space-evenly, $default);
+			gap: 2.5rem;
+			max-width: $max-width-desk;
+		}
 	}
 
 	li {
 		height: 15.75rem;
 
-        @include desktop {
-            height: 18rem;
-            flex : 1 0 calc((#{$max-width-desk} - 2.5rem) / 2 );
-        }
+		@include desktop {
+			height: 18rem;
+			flex: 1 0 calc((#{$max-width-desk} - 2.5rem) / 3);
+		}
 	}
 }
 
 .restaurant__card {
 	@extend .cards;
-
-	flex-direction: column-reverse;
+	@include flex(column-reverse, $default, $default, $default);
 	height: inherit;
 }
 
 .restaurant__card--info {
 	display: grid;
 	grid-template-columns: 1fr auto;
-	/* height: 4.8rem; */ /* make the animation work */
 	grid-template-areas:
 		"name heart"
 		"text heart";
@@ -206,7 +226,6 @@
 
 	button {
 		@extend .btn-heart;
-
 		grid-area: heart;
 		align-self: center;
 		justify-self: center;

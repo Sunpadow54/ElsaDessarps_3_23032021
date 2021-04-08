@@ -1,9 +1,11 @@
+// -----------------------------------------------------------
+/* HEADER */
+// -----------------------------------------------------------
+
 .main-header {
+	@include flex($default, $default, center, center);
 	position: relative;
 	height: 4rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	padding: 0 $gutters;
 
 	&__btn-return {
@@ -15,7 +17,7 @@
 		&::before {
 			@include icons-b-standard;
 			content: "\f060";
-            color: map-get($color, bg-footer-txt);
+			color: map-get($color, bg-footer-txt);
 			font-size: 1.3rem;
 		}
 	}

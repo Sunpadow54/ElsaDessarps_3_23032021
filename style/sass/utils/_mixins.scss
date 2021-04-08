@@ -1,16 +1,8 @@
-// blocs list flex ( menus + restaurants)
-@mixin layout-blocs-list {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-}
+// -----------------------------------------------------------
+/* MIXINS */
+// -----------------------------------------------------------
 
-// color of texts
-@mixin txt-color($bg-color: white) {
-	color: color-txt-switch($bg-color);
-}
-
-// icons FontAwesomes standards
+// ------------ ICONS FONTAWESOME standards
 @mixin icons-b-standard {
 	font-family: "Font Awesome 5 Free";
 	font-style: normal; /* fontawesome recommendation */
@@ -19,24 +11,44 @@
 	font-weight: 900;
 }
 
-// Text to long ? add ... Ellipsis !
+// ------------ Text to long ? add ... Ellipsis !
 @mixin text-ellipsis {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
 
-
-// Shadows of boxes
-@mixin shadows($opacity:0.15 ) {
-    box-shadow: 0px 4px 9px rgba(0,0,0,$opacity);
+// ------------ Shadows of boxes
+@mixin shadows($opacity: 0.15) {
+	box-shadow: 0px 4px 9px rgba(0, 0, 0, $opacity);
 }
 
-
-//MediaQueries
-
+// ------------ MediaQueries
 @mixin desktop {
-    @media screen and (min-width: 480px) {
-        @content;
-    }
+	@media screen and (min-width: 850px) {
+		@content;
+	}
 }
+
+// ------------ FLEXBOX Mixins
+$default: false; // Variable to use in the mixin, if we want to keep the default flexbox rule
+
+@mixin flex($direction, $wrap, $main_axis, $cross_axis) {
+	display: flex;
+
+	// Create a list from parameters of the mixin
+	$new-flex: (
+		flex-direction: $direction,
+		flex-wrap: $wrap,
+		justify-content: $main_axis,
+		align-items: $cross_axis,
+	);
+
+	// Check the list in order to insert or not, the flex rules
+	// ( if the parameter in the list is not $default, then add the css rule )
+	@each $para, $value in $new-flex {
+		@if ($value) {
+			#{$para}: $value;
+		}
+	}
+} ;

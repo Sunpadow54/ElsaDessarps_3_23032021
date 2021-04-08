@@ -1,4 +1,5 @@
 // -----------------------------------------------------------
+/* REFACTOR */
 /* Reset some basic automatic style */
 // -----------------------------------------------------------
 
@@ -9,20 +10,21 @@ html {
 
 * {
 	color: black;
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
 	margin: 0;
+	// page take the whole space;
+	min-height: 100vh;
+	@include flex(column, $default, $default, $default);
 }
 
-h1 {
-	margin: 0;
+main {
+	flex: 1; // page take the whole space;
 }
 
-.single-restaurant__menu--head > h2 {
-    margin: 0.3rem 0;
-}
+// lists & cie refactor
 
 li,
 ul,
@@ -33,14 +35,22 @@ ol {
 	text-decoration: none;
 }
 
+h1 {
+	margin: 0;
+}
+
+.single-restaurant__menu--head > h2 {
+	margin: 0.3rem 0;
+}
+
 // img resizing
 
 img {
 	display: block;
 	object-fit: cover;
-    object-position: center;
-    width: 100%;
-    height:100%;
+	object-position: center;
+	width: 100%;
+	height: 100%;
 }
 
 // links & buttons basic refactor
@@ -51,29 +61,15 @@ input {
 	outline: none;
 	border: none;
 	cursor: pointer;
-    padding: 0;
-    margin:0;
+	padding: 0;
+	margin: 0;
 }
 
 a {
 	text-decoration: none;
 }
 
-// Scrolling
-// for people who desactivate the scrolling behavior on browser
-
-@media (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
-}
-
-
-.hero__search{
-    box-sizing: border-box;
-}
-
 // colors txts
 p:not(.helper__list p) {
-    color: map-get($color, bg-footer-txt);
+	color: map-get($color, bg-footer-txt);
 }

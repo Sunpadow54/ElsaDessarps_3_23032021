@@ -1,4 +1,4 @@
-// Hearts animation
+// ------------ Hearts animation
 
 @keyframes filling-heart {
 	0% {
@@ -24,9 +24,9 @@
 	}
 }
 
+// ------------ Menus animation
 
-// Menus animation
-
+// Keyframes
 @keyframes menu-appearance {
 	10% {
 		opacity: 0;
@@ -38,11 +38,12 @@
 	}
 }
 
+// Delay the start of each courses
 @each $name-course, $nth-course in $menu-courses {
-	//select the course
+	// select the course
 	.menu-course:nth-of-type(#{$nth-course}) {
 		@for $i from 1 through 3 {
-			//select the dish + add time for each
+			// select the dish + add time for each
 			li:nth-of-type(#{$i}) {
 				animation-delay: $sec + 0.08s;
 			}

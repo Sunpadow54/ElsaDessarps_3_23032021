@@ -5,76 +5,74 @@
 }
 
 .logo,
-.single-restaurant__menu--head > h2
-{
+.single-restaurant__menu--head > h2 {
 	font-family: $font-logo;
 }
 
-
-
 // ---------- Fonts Sizes ----------
-
 
 p,
 button,
 input,
 .menu-course h3 {
-    font-size: 1rem;
+	font-size: 1rem;
 }
 
 .hero__description p {
-    font-size: 1.125rem;
+	font-size: 1.125rem;
 }
 
 .dish__description {
-    h4 {
-        font-size: 1.1rem;
-    }
-    p {
-        font-size: 0.96rem;
-    }
+	h4 {
+		font-size: 1.1rem;
+	}
+	p {
+		font-size: 0.96rem;
+	}
 }
 
 span {
-    font-size: 0.9rem;
+	font-size: 0.9rem;
 }
 
 .single-restaurant__menu--head > h2 {
-    font-size: 1.74em;
+	font-size: 1.74em;
 }
 
-
+footer h3 {
+	@include desktop {
+		font-size: 1.5rem;
+	}
+}
 
 // ---------- Fonts Weight ----------
-
 
 .logo,
 .single-restaurant__menu--head h2,
 footer h3,
 .menu-course h3 {
-    font-weight: normal;
+	font-weight: normal;
 }
 
 h2,
 input,
 .dish__price {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .hero__search input,
 .helper__list p,
 .restaurant__card--img span,
 .dish__description h4,
-button
- {
-    font-weight: 500;
+button {
+	font-weight: 500;
 }
 
 footer ul li a,
 footer ul li p {
-    font-weight: 400;
+	font-weight: 400;
 }
 
 p {
-    font-weight: 300;
+	font-weight: 300;
 }

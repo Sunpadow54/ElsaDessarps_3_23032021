@@ -1,5 +1,5 @@
 // -----------------------------------------------------------
-/* functions*/
+/* FUNCTIONS*/
 // -----------------------------------------------------------
 
 // colors tone-percents
@@ -8,7 +8,7 @@
 		@return darken($color, $tone-percent);
 	}
 
-    @if ($contrast == lighten) {
-        @return lighten($color, $tone-percent);
-    }
+	@if ($contrast == lighten) {
+		@return lighten($color, $tone-percent);
+	}
 }

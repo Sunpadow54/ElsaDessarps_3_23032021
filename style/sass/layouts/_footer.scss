@@ -1,39 +1,51 @@
+// -----------------------------------------------------------
+/* FOOTER */
+// -----------------------------------------------------------
+
 footer {
 	padding: $gutters;
 	background-color: map-get($color, bg-footer-txt);
-    @include desktop {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-	h3 {
-		margin-top: 0;
-	}
 
 	* {
 		color: white;
 		margin: 0;
-        
-        @include desktop {
-            max-width: $max-width-desk;
-            width: 100%;
-        }
+	}
+
+	h3 {
+		margin-top: 0;
+
+		@include desktop {
+			width: $footer-e-size;
+		}
+	}
+
+	ul {
+		@include desktop {
+			@include flex(column, wrap, center, $default);
+			gap: 0.4rem;
+			width: calc(#{$footer-e-size} * 2);
+			height: 3rem;
+		}
+	}
+
+	@include desktop {
+		@include flex($default, $default, center, $default);
+		padding: 2rem $gutters;
 	}
 }
 
-// links nav in the footer
+// ------------ lINKS nav in the footer
+
 .footer__link {
 	margin: 0.5rem 0;
 
 	// icons links footer
 	&::before {
 		@include icons-b-standard;
-
 		margin-right: 0.7rem;
 	}
 
-	//hover and active
+	// hover and active
 	&:hover,
 	&:hover a {
 		color: $color-primary;
@@ -43,11 +55,17 @@ footer {
 	&:active a {
 		color: $color-primary;
 	}
+
+	@include desktop {
+		width: $footer-e-size;
+		margin: 0;
+	}
 }
 
 // Icons links
 .footer__link--propose {
 	@extend .footer__link;
+
 	&::before {
 		content: "\f2e7";
 	}
@@ -55,6 +73,7 @@ footer {
 
 .footer__link--partenaire {
 	@extend .footer__link;
+
 	&::before {
 		content: "\f4c4";
 	}

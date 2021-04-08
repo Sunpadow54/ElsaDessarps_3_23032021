@@ -1,15 +1,18 @@
 // -----------------------------------------------------------
-/* Restaurant Menus page */
+/* Restaurant Menus */
 // -----------------------------------------------------------
 
-/* Main */
+// ------------ MAIN */
 
 .single-restaurant {
 	img {
 		height: 17rem;
 		z-index: -1;
 	}
+	background-color: map-get($color, bg-blocs);
 }
+
+// ------------ MENU */
 
 .single-restaurant__menu {
 	position: relative; /* to fix the background transparent with negativ margin */
@@ -18,18 +21,13 @@
 	padding-bottom: 3rem;
 	border-radius: 40px 40px 0 0;
 	background-color: map-get($color, bg-blocs);
-
 	@include desktop {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		@include flex(column, $default, space-between, center);
+		height: 100%;
 	}
 
 	&--head {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-
+		@include flex(row, nowrap, space-between, center);
 		@include desktop {
 			text-align: left;
 			width: 100%;
@@ -42,25 +40,19 @@
 	}
 
 	&--form {
-		display: flex;
-		flex-direction: column;
-
+		@include flex(column, $default, $default, $default);
+		width: 100%;
 		@include desktop {
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: space-between;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: auto;
 			gap: 2.5rem;
 			max-width: $max-width-desk;
 		}
-
-		li {
-			// Menus animation
-			opacity: 0;
-			transform: translateY(80px);
-			animation: menu-appearance 0.5s ease-out forwards;
-		}
 	}
 }
+
+// ------------ STARTERS - MAIN COURSES - DESERTS
 
 .menu-course {
 	h3 {
@@ -68,23 +60,26 @@
 		font-weight: 300;
 		color: map-get($color, bg-footer-txt);
 		border-bottom: 3px solid $color-third;
-		width: 2.375rem;
+		max-width: 2.375rem;
 		line-height: 1.75rem;
 	}
 
 	ul {
-		@include layout-blocs-list;
+		@include flex(column, $default, $default, $default);
+		gap: 1rem;
 	}
-
 	@include desktop {
-		flex: 1 0 calc((#{$max-width-desk} - 2.5rem) / 3);
+		min-width: 0;
 	}
 }
 
 .dish {
 	@extend .cards;
-
 	position: relative;
+	// animation
+	opacity: 0;
+	transform: translateY(80px);
+	animation: menu-appearance 0.5s ease-out forwards;
 
 	&__description {
 		padding: 0.8rem 0 0.8rem 0.8rem;
@@ -103,7 +98,7 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		width: 0px;
+		/* width: 0px; */
 		height: 100%;
 		width: 3.6rem;
 		display: none;
@@ -130,9 +125,7 @@
 
 		// icon dish select
 		i {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			@include flex($default, $default, center, center);
 			height: 100%;
 			color: white;
 			font-size: 1.4rem;
@@ -171,10 +164,9 @@
 }
 
 // Button Order
-
 .menu-btn-order {
+	@include flex($default, $default, $default, $default);
 	align-self: center;
-	display: flex;
 	margin: 2.6rem 0 2rem 0;
 
 	input {
@@ -183,9 +175,9 @@
 	}
 
 	@include desktop {
-		box-sizing: border-box;
-		align-self: flex-end;
+		grid-column: 2;
+		justify-self: center;
+		align-self: end;
 		margin: 0;
-		flex: 1 0 calc((#{$max-width-desk} - 2.5rem) / 3);
 	}
 }

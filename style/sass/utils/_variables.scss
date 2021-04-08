@@ -1,6 +1,8 @@
 // -----------------------------------------------------------
-/* variables*/
+/*  VARIABLES*/
 // -----------------------------------------------------------
+
+// ------------ COLORS
 
 // colors brand
 $color-primary: #9356dc;
@@ -16,18 +18,25 @@ $color: (
 	bg-blocs: tone-color($color-canvas, 96%, lighten),
 );
 
+// ------------ FONTS
+
 // font style
 $font-logo: "Shrikhand", cursive;
 $font-txt: "Roboto", sans-serif;
+
+// Sizes
 
 // gutters
 $gutters: 1.5rem;
 
 // max width section desktop
-$max-width-desk: 1000px;
+$max-width-desk: 1200px;
+$footer-e-size: 250px;
 
 //border radius
 $border-rad-btn: 50px;
+
+// ------------ ANIMATION
 
 // menu courses and second for menus animation
 $menu-courses: (
