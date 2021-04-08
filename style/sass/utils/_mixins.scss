@@ -3,6 +3,7 @@
 // -----------------------------------------------------------
 
 // ------------ ICONS FONTAWESOME standards
+
 @mixin icons-b-standard {
 	font-family: "Font Awesome 5 Free";
 	font-style: normal; /* fontawesome recommendation */
@@ -19,15 +20,17 @@
 }
 
 // ------------ Shadows of boxes
+
 @mixin shadows($opacity: 0.15) {
 	box-shadow: 0px 4px 9px rgba(0, 0, 0, $opacity);
 
-    &:hover {
-        box-shadow: 0px 3px 8px rgba(0, 0, 0, calc(#{$opacity} + 0.15));
-    }
+	&:not(.dish):hover {
+		box-shadow: 0px 3px 8px rgba(0, 0, 0, calc(#{$opacity} + 0.15));
+	}
 }
 
 // ------------ MediaQueries
+
 @mixin desktop {
 	@media screen and (min-width: 850px) {
 		@content;
@@ -35,6 +38,7 @@
 }
 
 // ------------ FLEXBOX Mixins
+
 $default: false; // Variable to use in the mixin, if we want to keep the default flexbox rule
 
 @mixin flex($direction, $wrap, $main_axis, $cross_axis) {

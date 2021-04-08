@@ -1,3 +1,9 @@
+// -----------------------------------------------------------
+/* Restaurant Menus */
+// -----------------------------------------------------------
+
+// ------------ Btn BRAND*/
+
 .btn-brand {
 	@include shadows(0.3);
 	position: relative;
@@ -45,8 +51,10 @@
 	}
 }
 
+// ------------ Btn HEART*/
+
 .btn-heart {
-    @include flex($default, $default, center, center);
+	@include flex($default, $default, center, center);
 	height: 25px;
 	width: auto;
 	font-size: 1.5rem;
@@ -69,5 +77,44 @@
 
 	&:hover {
 		animation: filling-heart 0.7s cubic-bezier(0.32, 0, 0.71, 0) forwards;
+	}
+}
+
+// ------------ Btn SELECT DISH*/
+
+.dish__btn-select {
+	display: grid;
+	grid-template-areas: "btn-check";
+	justify-content: center;
+	align-items: center;
+
+	input {
+		grid-area: btn-check;
+		z-index: 2;
+		opacity: 0;
+		width: 100%; /* click area on all the btn */
+		height: 100%; /* click area on all the btn */
+
+		&:checked + span {
+			margin-right: 0;
+			i {
+				transform: rotate(
+					360deg
+				); /* fix fix the rotation if the btn is checked */
+			}
+		}
+	}
+	span {
+		width: 3.6rem;
+		grid-area: btn-check;
+		transition: margin-right 0.27s linear;
+
+		// icon select
+		i {
+			@include flex($default, $default, center, center);
+			height: 100%;
+			color: white;
+			font-size: 1.4rem;
+		}
 	}
 }

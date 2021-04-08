@@ -407,7 +407,7 @@ footer h3 {
   white-space: nowrap;
   padding-right: 3rem;
 }
-.helper__list:hover {
+.helper__list:not(.dish):hover {
   box-shadow: 0px 3px 8px rgba(0, 0, 0, calc(0.15 + 0.15));
 }
 .helper__list::before {
@@ -638,62 +638,39 @@ footer h3 {
 
 .dish {
   position: relative;
+  height: 4.3rem;
   opacity: 0;
   transform: translateY(80px);
   animation: menu-appearance 0.5s ease-out forwards;
 }
 .dish__description {
-  padding: 0.8rem 0 0.8rem 0.8rem;
+  align-self: center;
+  padding-left: 0.8rem;
   flex: 1;
 }
 .dish__price {
   margin-left: auto;
-  height: inherit;
   align-self: flex-end;
-  padding: 0.8rem 1.5rem;
+  padding: 0 1.5rem 0.8rem 0.6rem;
   color: #363636;
 }
-.dish__btn {
-  position: absolute;
-  top: 0;
-  right: 0;
-  /* width: 0px; */
-  height: 100%;
-  width: 3.6rem;
-  display: none;
-  z-index: 2;
-  opacity: 0;
-}
-.dish__btn:checked + .dish__btn-img {
-  width: 3.6rem;
-}
-.dish__btn:checked + .dish__btn-img i {
-  transform: rotate(360deg);
-}
-.dish__btn-img {
-  width: 0px;
-  height: inherit;
+.dish__btn-select {
   background-color: #99e2d0;
-  padding: 0;
-  transition: width 0.27s linear;
 }
-.dish__btn-img i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  color: white;
-  font-size: 1.4rem;
+.dish__btn-select input,
+.dish__btn-select span {
+  margin-right: -3.6rem;
+}
+.dish__btn-select input i,
+.dish__btn-select span i {
   transition: transform 0.45s ease-in-out;
   transform: rotate(0deg);
 }
-.dish:hover > .dish__btn {
-  display: block;
+.dish:hover .dish__btn-select > * {
+  transition: margin-right 0.25s linear, transform 0.45s ease-in-out;
+  margin-right: 0;
 }
-.dish:hover > .dish__btn-img {
-  width: 3.6rem;
-}
-.dish:hover > .dish__btn-img i {
+.dish:hover .dish__btn-select > * i {
   transform: rotate(360deg);
 }
 
@@ -739,10 +716,11 @@ footer h3 {
   border-radius: 15px;
   overflow: hidden;
 }
-.cards:hover, .restaurant__card:hover, .dish:hover {
+.cards:not(.dish):hover, .restaurant__card:not(.dish):hover, .dish:not(.dish):hover {
   box-shadow: 0px 3px 8px rgba(0, 0, 0, calc(0.15 + 0.15));
 }
 
+/* Restaurant Menus */
 .btn-brand {
   box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
   position: relative;
@@ -759,7 +737,7 @@ footer h3 {
   transform-origin: 50% 50%;
   z-index: 1;
 }
-.btn-brand:hover {
+.btn-brand:not(.dish):hover {
   box-shadow: 0px 3px 8px rgba(0, 0, 0, calc(0.3 + 0.15));
 }
 .btn-brand:hover::after, .btn-brand:active::after {
@@ -809,6 +787,42 @@ footer h3 {
 }
 .btn-heart:hover, .restaurant__card--info button:hover, .single-restaurant__menu--head button:hover {
   animation: filling-heart 0.7s cubic-bezier(0.32, 0, 0.71, 0) forwards;
+}
+
+.dish__btn-select {
+  display: grid;
+  grid-template-areas: "btn-check";
+  justify-content: center;
+  align-items: center;
+}
+.dish__btn-select input {
+  grid-area: btn-check;
+  z-index: 2;
+  opacity: 0;
+  width: 100%;
+  /* click area on all the btn */
+  height: 100%;
+  /* click area on all the btn */
+}
+.dish__btn-select input:checked + span {
+  margin-right: 0;
+}
+.dish__btn-select input:checked + span i {
+  transform: rotate(360deg);
+  /* fix fix the rotation if the btn is checked */
+}
+.dish__btn-select span {
+  width: 3.6rem;
+  grid-area: btn-check;
+  transition: margin-right 0.27s linear;
+}
+.dish__btn-select span i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  font-size: 1.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

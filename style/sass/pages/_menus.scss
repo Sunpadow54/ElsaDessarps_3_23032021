@@ -76,73 +76,46 @@
 .dish {
 	@extend .cards;
 	position: relative;
+	height: 4.3rem;
 	// animation
 	opacity: 0;
 	transform: translateY(80px);
 	animation: menu-appearance 0.5s ease-out forwards;
 
 	&__description {
-		padding: 0.8rem 0 0.8rem 0.8rem;
+		align-self: center;
+		padding-left: 0.8rem;
 		flex: 1;
 	}
 
 	&__price {
 		margin-left: auto;
-		height: inherit;
 		align-self: flex-end;
-		padding: 0.8rem 1.5rem;
+		padding: 0 1.5rem 0.8rem 0.6rem;
 		color: map-get($color, bg-footer-txt);
 	}
 
-	&__btn {
-		position: absolute;
-		top: 0;
-		right: 0;
-		/* width: 0px; */
-		height: 100%;
-		width: 3.6rem;
-		display: none;
-		z-index: 2;
-		opacity: 0;
+	&__btn-select {
+		background-color: $color-third;
 
-		&:checked + .dish__btn-img {
-			width: 3.6rem;
+		input,
+		span {
+			margin-right: -3.6rem;
 
-			// icon dish select
 			i {
-				transform: rotate(360deg);
+				// animation rotate icon
+				transition: transform 0.45s ease-in-out;
+				transform: rotate(0deg);
 			}
 		}
 	}
 
-	&__btn-img {
-		width: 0px;
-		height: inherit;
-		background-color: $color-third;
-		padding: 0;
-		// animation appearance btn
-		transition: width 0.27s linear;
-
-		// icon dish select
+	// Hover
+	&:hover .dish__btn-select > * {
+		transition: margin-right 0.25s linear, transform 0.45s ease-in-out;
+		margin-right: 0;
 		i {
-			@include flex($default, $default, center, center);
-			height: 100%;
-			color: white;
-			font-size: 1.4rem;
 			// animation rotate icon
-			transition: transform 0.45s ease-in-out;
-			transform: rotate(0deg);
-		}
-	}
-
-	&:hover > .dish__btn {
-		display: block;
-	}
-
-	&:hover > .dish__btn-img {
-		width: 3.6rem;
-		// icon dish select
-		i {
 			transform: rotate(360deg);
 		}
 	}
