@@ -21,6 +21,10 @@
 // ------------ Shadows of boxes
 @mixin shadows($opacity: 0.15) {
 	box-shadow: 0px 4px 9px rgba(0, 0, 0, $opacity);
+
+    &:hover {
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, calc(#{$opacity} + 0.15));
+    }
 }
 
 // ------------ MediaQueries

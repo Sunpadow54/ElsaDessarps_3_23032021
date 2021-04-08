@@ -1,6 +1,5 @@
 .btn-brand {
 	@include shadows(0.3);
-
 	position: relative;
 	color: white;
 	height: 3.2rem;
@@ -28,15 +27,13 @@
 
 	//background color lighter for animation perf
 	&::after {
-		@include shadows(0.1);
-
 		content: "";
 		display: block;
 		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
+		top: -1px;
+		right: -1px;
+		bottom: -1px;
+		left: -1px;
 		border-radius: $border-rad-btn;
 		background: linear-gradient(
 			356deg,
@@ -49,15 +46,13 @@
 }
 
 .btn-heart {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    @include flex($default, $default, center, center);
 	height: 25px;
 	width: auto;
 	font-size: 1.5rem;
 	padding: 0 0.3rem;
 	/* background */
-	color: $color-primary;
+	/* color: $color-primary; */
 	background: linear-gradient(210deg, $color-primary, $color-secondary);
 	background-repeat: no-repeat;
 	background-position: center 27px; /* move the backgound out of the box */
