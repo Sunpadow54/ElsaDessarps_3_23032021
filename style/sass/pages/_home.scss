@@ -192,7 +192,7 @@
 
 		@include desktop {
 			height: 18rem;
-			flex: 1 0 calc((#{$max-width-desk} - 2.5rem) / 3);
+			flex: 1 0 ($max-width-desk - 2.5) / 3;
 		}
 	}
 }

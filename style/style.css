@@ -254,7 +254,7 @@ footer h3 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.4rem;
-    width: calc(250px * 2);
+    width: 500px;
     height: 3rem;
   }
 }
@@ -367,7 +367,7 @@ footer h3 {
 }
 @media screen and (min-width: 850px) {
   .helper h2 {
-    max-width: 1200px;
+    max-width: 75rem;
     width: 100%;
     text-align: left;
     margin: 0;
@@ -408,7 +408,7 @@ footer h3 {
   padding-right: 3rem;
 }
 .helper__list:not(.dish):hover {
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, calc(0.15 + 0.15));
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
 }
 .helper__list::before {
   display: flex;
@@ -482,7 +482,7 @@ footer h3 {
   .restaurants h2 {
     text-align: left;
     width: 100%;
-    max-width: 1200px;
+    max-width: 75rem;
   }
 }
 .restaurants ul {
@@ -498,7 +498,7 @@ footer h3 {
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 2.5rem;
-    max-width: 1200px;
+    max-width: 75rem;
   }
 }
 .restaurants li {
@@ -507,7 +507,7 @@ footer h3 {
 @media screen and (min-width: 850px) {
   .restaurants li {
     height: 18rem;
-    flex: 1 0 calc((1200px - 2.5rem) / 3);
+    flex: 1 0 24.1666666667rem;
   }
 }
 
@@ -599,7 +599,7 @@ footer h3 {
   .single-restaurant__menu--head {
     text-align: left;
     width: 100%;
-    max-width: 1200px;
+    max-width: 75rem;
   }
 }
 .single-restaurant__menu--form {
@@ -613,7 +613,7 @@ footer h3 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     gap: 2.5rem;
-    max-width: 1200px;
+    max-width: 75rem;
   }
 }
 
@@ -717,7 +717,7 @@ footer h3 {
   overflow: hidden;
 }
 .cards:not(.dish):hover, .restaurant__card:not(.dish):hover, .dish:not(.dish):hover {
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, calc(0.15 + 0.15));
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Restaurant Menus */
@@ -738,7 +738,7 @@ footer h3 {
   z-index: 1;
 }
 .btn-brand:not(.dish):hover {
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, calc(0.3 + 0.15));
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.45);
 }
 .btn-brand:hover::after, .btn-brand:active::after {
   opacity: 1;
