@@ -21,14 +21,14 @@ footer {
 
 	ul {
 		@include desktop {
-			@include flex(column, wrap, center, $default);
+			@include flex(column, wrap, center);
 			gap: 0.4rem;
-            @include shape($footer-e-size * 2, 3rem);
+			@include shape($footer-e-size * 2, 3rem);
 		}
 	}
 
 	@include desktop {
-		@include flex($default, $default, center, $default);
+		@include flex($default, $default, center);
 		padding: 2rem $gutters;
 	}
 }

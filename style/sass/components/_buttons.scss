@@ -35,7 +35,7 @@
 	&::after {
 		content: "";
 		display: block;
-        @include position(absolute, -1px, -1px, -1px, -1px);
+		@include position(absolute, -1px, -1px, -1px, -1px);
 		border-radius: $border-rad-btn;
 		background: linear-gradient(
 			356deg,
@@ -51,7 +51,7 @@
 
 .btn-heart {
 	@include flex($default, $default, center, center);
-    @include shape(auto, 25px);
+	@include shape(auto, 25px);
 	font-size: 1.5rem;
 	padding: 0 0.3rem;
 	//--- background
@@ -77,22 +77,19 @@
 // ------------ Btn SELECT DISH*/
 
 .dish__btn-select {
-	display: grid;
-	grid-template-areas: "btn-check";
-	justify-content: center;
-	align-items: center;
+	@include grid($default, $default, center, center, "btn-check");
 
 	input {
 		grid-area: btn-check;
 		z-index: 2;
 		opacity: 0;
-        @include shape(100%, 100%); /* click area on all the btn */
+		@include shape(100%, 100%); /* click area on all the btn */
 
 		&:checked + span {
 			margin-right: 0;
 			i {
-                /* fix fix the rotation if the btn is checked */
-				transform: rotate(1turn); 
+				/* fix fix the rotation if the btn is checked */
+				transform: rotate(1turn);
 			}
 		}
 	}

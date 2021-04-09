@@ -46,3 +46,5 @@ $menu-courses: (
 );
 
 $sec: 0.5;
+
+$default: false; // Variable to use in the mixins "flex", "grid", "position",  if we want to keep the defaults rules

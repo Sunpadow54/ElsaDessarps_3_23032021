@@ -17,7 +17,7 @@ body {
 	margin: 0;
 	// page take the whole space;
 	min-height: 100vh;
-	@include flex(column, $default, $default, $default);
+	@include flex(column);
 }
 
 main {

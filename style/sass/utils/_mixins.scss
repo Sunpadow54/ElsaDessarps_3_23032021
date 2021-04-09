@@ -39,9 +39,12 @@
 
 // ------------ FLEXBOX Mixins
 
-$default: false; // Variable to use in the mixin, if we want to keep the default flexbox rule
-
-@mixin flex($direction, $wrap, $main_axis, $cross_axis) {
+@mixin flex(
+	$direction,
+	$wrap: $default,
+	$main_axis: $default,
+	$cross_axis: $default
+) {
 	display: flex;
 
 	// Create a list from parameters of the mixin
@@ -61,9 +64,38 @@ $default: false; // Variable to use in the mixin, if we want to keep the default
 	}
 }
 
-// ------------ Shaping boxs
+// ------------ Grid Mixins
 
-@mixin shape($width, $height, $border-radius:$default) {
+@mixin grid(
+	$col,
+	$row,
+	$main_axis: $default,
+	$cross_axis: $default,
+	$areas: $default
+) {
+	display: grid;
+
+	// Create a list from parameters of the mixin
+	$new-grid: (
+		grid-template-columns: $col,
+		grid-template-rows: $row,
+		justify-content: $main_axis,
+		align-items: $cross_axis,
+		grid-template-areas: $areas,
+	);
+
+	// Check the list in order to insert or not, the grid rules
+	// ( if the parameter in the list is not $default, then add the css rule )
+	@each $para, $value in $new-grid {
+		@if ($value) {
+			#{$para}: $value;
+		}
+	}
+}
+
+// ------------ Shaping boxes
+
+@mixin shape($width, $height, $border-radius: $default) {
 	width: $width;
 	height: $height;
 
@@ -74,7 +106,7 @@ $default: false; // Variable to use in the mixin, if we want to keep the default
 	}
 }
 
-// ------------ Place boxs
+// ------------ Place boxes
 
 @mixin position($position, $top, $right, $bottom, $left) {
 	position: $position;
