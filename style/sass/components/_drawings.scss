@@ -1,0 +1,155 @@
+// -----------------------------------------------------------
+//  Drawings
+// -----------------------------------------------------------
+
+// ------------ LOADER
+
+.loading {
+	@include position(fixed, 0, 0, 0, 0);
+	@include grid(2fr repeat(3, 8rem) 2fr, 100vh);
+	background-color: rgba(255, 255, 255, 0.7);
+	z-index: 2;
+	backdrop-filter: blur(1px); /* only in chrome */
+
+	.container {
+		position: relative;
+		grid-row: 1;
+		@include flex($default, $default, center, center);
+		@include shape(8rem, 8rem);
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		z-index: 2;
+		transform-style: preserve-3d;
+	}
+}
+
+// Loader Drawings
+
+.eggplant {
+	grid-column: 2 / span 2;
+	justify-self: end;
+	margin-right: 5.2rem;
+
+	&__shape {
+		position: relative;
+		@include shape(4rem, 6rem, 90% 10% 66% 34% / 74% 30% 70% 26%);
+		border: 0.4rem solid $color-violet-dark;
+		border-width: 0.2rem 0.9rem 0.8rem 0.3rem;
+		background-color: $color-primary;
+		background: linear-gradient(
+			110deg,
+			$color-primary 0%,
+			$color-primary 65%,
+			$color-violet-dark 65%,
+			$color-violet-dark 100%
+		);
+		transform: rotate(22deg);
+	}
+
+	&__shape::after {
+		content: "";
+		@include position(absolute, -1.3rem, -1.2rem, $default, $default);
+		@include shape(1.8rem, 2rem);
+		clip-path: polygon(
+			11% 49%,
+			38% 27%,
+			34% 0,
+			46% 4%,
+			53% 25%,
+			89% 48%,
+			100% 100%,
+			68% 71%,
+			52% 100%,
+			36% 73%,
+			0 100%
+		);
+		background-color: $color-third;
+		transform: rotate(20deg);
+	}
+}
+
+.steack {
+	grid-column: 3 / 4;
+	transform: rotateX(12deg) rotateZ(-32deg) skewX(14deg);
+
+	&__shape {
+		position: relative;
+		@include shape(5rem, 6rem, 41% 59% 59% 41% / 62% 74% 26% 38%);
+		border: 0.5rem solid tone-color($color-secondary, 15%, lighten);
+		background-color: $color-secondary;
+		background: linear-gradient(
+			342deg,
+			$color-secondary 0%,
+			$color-secondary 20%,
+			$color-meat-strap 20%,
+			$color-meat-strap 25%,
+			$color-secondary 25%,
+			$color-secondary 47%,
+			$color-meat-strap 47%,
+			$color-meat-strap 52%,
+			$color-secondary 52%,
+			$color-secondary 74%,
+			$color-meat-strap 74%,
+			$color-meat-strap 79%,
+			$color-secondary 79%,
+			$color-secondary 100%
+		);
+	}
+
+	&__shape::before {
+		content: "";
+		@include position(absolute, $default, $default, 0.6rem, 0.7rem);
+		@include shape(1.3rem, 1.3rem, 50%);
+		background-color: white;
+		border: 0.25rem solid $color-meat-strap;
+		border-width: 0.1rem 0.25rem 0.15rem 0;
+		z-index: 3;
+	}
+
+	&__shape::after {
+		content: "";
+		@include position(absolute, $default, $default, -1.1rem, -1.05rem);
+		@include shape(5rem, 6rem, 41% 59% 59% 41% / 62% 74% 26% 38%);
+		background-color: desaturate(
+			tone-color($color-secondary, 20%, darken),
+			60%
+		);
+		z-index: -1;
+	}
+}
+
+.avocado {
+	grid-column: span 2 / 5;
+	margin-left: 5rem;
+	transform: rotateX(10deg) rotateZ(30deg);
+
+	&__shape {
+		position: relative;
+		background-color: $color-third;
+		@include shape(4.3rem, 6rem, 51% 49% 48% 52% / 68% 68% 32% 32%);
+		border: 0.5rem solid $color-avocado-skin;
+	}
+
+	&__shape::before {
+		content: "";
+		@include position(absolute, $default, 0, 0.8rem, 0);
+		@include shape(2rem, 2rem, 50%);
+		margin: auto;
+		border: 0.25rem solid tone-color($color-violet-dark, 10%, darken);
+		background-color: $color-primary;
+		background: linear-gradient(
+			140deg,
+			$color-primary 0%,
+			$color-primary 60%,
+			$color-violet-dark 60%,
+			$color-violet-dark 100%
+		);
+	}
+
+	&__shape::after {
+		content: "";
+		@include position(absolute, $default, -0.6rem, -0.5rem, 0);
+		@include shape(4.3rem, 6rem, 42% 58% 47% 53% / 71% 65% 35% 29%);
+		background-color: $color-avocado-skin;
+		z-index: -2;
+	}
+}

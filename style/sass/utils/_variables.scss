@@ -2,6 +2,9 @@
 /*  VARIABLES*/
 // -----------------------------------------------------------
 
+// Variable to use in the mixins "flex", "grid", "position",  if we want to keep the defaults rules
+$default: false;
+
 // ------------ COLORS
 
 // colors brand
@@ -18,13 +21,16 @@ $color: (
 	bg-blocs: tone-color($color-canvas, 96%, lighten),
 );
 
+// colors of the drawings (loader)
+$color-meat-strap: desaturate(tone-color($color-secondary, 20%, darken), 80%);
+$color-violet-dark: tone-color($color-primary, 10%, darken);
+$color-avocado-skin: tone-color($color-third, 35%, darken);
+
 // ------------ FONTS
 
 // font style
 $font-logo: "Shrikhand", cursive;
 $font-txt: "Roboto", sans-serif;
-
-// Sizes
 
 // gutters
 $gutters: 1.5rem;
@@ -46,5 +52,3 @@ $menu-courses: (
 );
 
 $sec: 0.5;
-
-$default: false; // Variable to use in the mixins "flex", "grid", "position",  if we want to keep the defaults rules
