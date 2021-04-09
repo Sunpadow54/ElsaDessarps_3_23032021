@@ -63,7 +63,7 @@ $default: false; // Variable to use in the mixin, if we want to keep the default
 
 // ------------ Shaping boxs
 
-@mixin shape($width, $height, $border-radius) {
+@mixin shape($width, $height, $border-radius:$default) {
 	width: $width;
 	height: $height;
 

@@ -105,15 +105,12 @@
 
 	// helpers numbers
 	&::before {
+        content: counter(compteur);
 		@include flex($default, $default, center, center);
-		position: absolute;
-		left: -12px;
-		content: counter(compteur);
+        @include position(absolute, $default, $default, $default, -12px);
+        @include shape(27px, 27px, 50%);
 		font-size: 0.9rem;
 		order: 1;
-		width: 27px;
-		height: 27px;
-		border-radius: 50%;
 		background-color: $color-primary;
 		color: white;
 	}

@@ -35,11 +35,7 @@
 	&::after {
 		content: "";
 		display: block;
-		position: absolute;
-		top: -1px;
-		right: -1px;
-		bottom: -1px;
-		left: -1px;
+        @include position(absolute, -1px, -1px, -1px, -1px);
 		border-radius: $border-rad-btn;
 		background: linear-gradient(
 			356deg,
@@ -55,12 +51,10 @@
 
 .btn-heart {
 	@include flex($default, $default, center, center);
-	height: 25px;
-	width: auto;
+    @include shape(auto, 25px);
 	font-size: 1.5rem;
 	padding: 0 0.3rem;
-	/* background */
-	/* color: $color-primary; */
+	//--- background
 	background: linear-gradient(210deg, $color-primary, $color-secondary);
 	background-repeat: no-repeat;
 	background-position: center 27px; /* move the backgound out of the box */
@@ -92,15 +86,13 @@
 		grid-area: btn-check;
 		z-index: 2;
 		opacity: 0;
-		width: 100%; /* click area on all the btn */
-		height: 100%; /* click area on all the btn */
+        @include shape(100%, 100%); /* click area on all the btn */
 
 		&:checked + span {
 			margin-right: 0;
 			i {
-				transform: rotate(
-					360deg
-				); /* fix fix the rotation if the btn is checked */
+                /* fix fix the rotation if the btn is checked */
+				transform: rotate(1turn); 
 			}
 		}
 	}

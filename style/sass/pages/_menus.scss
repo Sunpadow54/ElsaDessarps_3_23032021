@@ -15,8 +15,7 @@
 // ------------ MENU */
 
 .single-restaurant__menu {
-	position: relative; /* to fix the background transparent with negativ margin */
-	margin-top: -3.3rem;
+    @include position(relative, -3.3rem, $default, $default, $default);
 	padding: $gutters;
 	padding-bottom: 3rem;
 	border-radius: 40px 40px 0 0;
@@ -116,7 +115,7 @@
 		margin-right: 0;
 		i {
 			// animation rotate icon
-			transform: rotate(360deg);
+			transform: rotate(1turn);
 		}
 	}
 }

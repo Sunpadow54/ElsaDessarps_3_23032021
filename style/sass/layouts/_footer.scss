@@ -23,8 +23,7 @@ footer {
 		@include desktop {
 			@include flex(column, wrap, center, $default);
 			gap: 0.4rem;
-			width: $footer-e-size * 2;
-			height: 3rem;
+            @include shape($footer-e-size * 2, 3rem);
 		}
 	}
 
