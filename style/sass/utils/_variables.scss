@@ -17,8 +17,8 @@ $color-canvas: #000000;
 
 // colors elements
 $color: (
-	bg-footer-txt: tone-color($color-canvas, 21%, lighten),
-	bg-blocs: tone-color($color-canvas, 96%, lighten),
+  bg-footer-txt: tone-color($color-canvas, 21%, lighten),
+  bg-blocs: tone-color($color-canvas, 96%, lighten),
 );
 
 // colors of the drawings (loader)
@@ -44,11 +44,28 @@ $border-rad-btn: 50px;
 
 // ------------ ANIMATION
 
-// menu courses and second for menus animation
+// -- menu courses and second for menus animation
 $menu-courses: (
-	entrance: 1,
-	main-course: 2,
-	desert: 3,
+  entrance: 1,
+  main-course: 2,
+  desert: 3,
 );
 
 $sec: 0.5;
+
+// -- Loader
+$loader-duration: 5.7;
+// size food boxes
+$food-size: 8rem;
+// Falling
+$fall-duration: 0.45s;
+$fall-timing: linear;
+$fall-delay: $fall-duration / 3;
+$fall-start-pos: -60vh;
+$fall-end-pos: $food-size / 2;
+// Bouncing
+$bounce-duration: 0.5s;
+$bounce-timing: cubic-bezier(.05, 0.5, 0.5, 1);
+$bounce-height: $fall-end-pos - 7rem;
+$bouces-iteration: ceil($loader-duration * 2);
+
