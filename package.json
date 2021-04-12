@@ -1,11 +1,13 @@
 {
-  "name": "p3_ohmyfood",
+  "name": "p3_oc_ohmyfood",
   "version": "1.0.0",
   "description": "*Projet de formation n°3 du parcours Développeur Web - Openclassrooms*\r Dynamisez une page web avec des animations Css.",
   "main": "index.html",
   "scripts": {
-    "sass": "sass --watch ./style/sass/style.scss:./style/style.css"
+    "sass": "sass --watch ./style/sass/main.scss:./style/css/style.css --style compressed",
+    "prefix": "postcss ./style/css/style.css --use autoprefixer -d ./style/css/prefixed/"
   },
-  "author": "",
+  "browserslist": "last 4 versions",
+  "author": "Sunpadow54 - Elsa Dessarps",
   "license": "ISC"
 }
