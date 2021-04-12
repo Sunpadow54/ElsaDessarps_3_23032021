@@ -42,7 +42,7 @@
 @each $name-course, $nth-course in $menu-courses {
   // select the course
   .menu-course:nth-of-type(#{$nth-course}) {
-    @for $i from 1 through 3 {
+    @for $i from 1 through $max-nbr-menu {
       // select the dish + add time for each
       li:nth-of-type(#{$i}) {
         animation-delay: $sec + 0.08s;
