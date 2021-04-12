@@ -15,7 +15,8 @@
 // ------------ MENU */
 
 .single-restaurant__menu {
-	@include position(relative, -3.3rem, $default, $default, $default);
+	position: relative;
+	margin-top: -3.3rem;
 	padding: $gutters;
 	padding-bottom: 3rem;
 	border-radius: 40px 40px 0 0;

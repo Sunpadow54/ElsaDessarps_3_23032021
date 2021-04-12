@@ -69,6 +69,17 @@ a {
 }
 
 // colors txts
+
 p {
 	color: map-get($color, bg-footer-txt);
+}
+
+// cursor
+
+p,
+h1,
+h2,
+h3,
+h4 {
+	cursor: default;
 }
