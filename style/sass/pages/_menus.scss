@@ -84,6 +84,18 @@
 		align-self: center;
 		padding-left: 0.8rem;
 		flex: 1;
+        overflow: hidden;
+
+        h4 {
+            @include text-ellipsis;
+            margin: 0;
+            margin-bottom: 0.3rem;
+        }
+    
+        p {
+            @include text-ellipsis;
+            margin: 0;
+        }
 	}
 
 	&__price {
@@ -93,45 +105,35 @@
 		color: map-get($color, bg-footer-txt);
 	}
 
-	&__btn-select {
-		background-color: $color-third;
+    &__btn-select {
+        @include position(absolute, 0, 0, 0, 0);
+        @include shape(100%, 100%);
+        z-index: 2;
+		opacity: 0;
 
-		input,
-		span {
-			margin-right: -3.6rem;
+        // animate the check
+        &:checked + .dish__check-icon {
+            margin-right: 0;
 
-			i {
-				// animation rotate icon
-				transition: transform 0.45s ease-in-out;
-				transform: rotate(0deg);
+            i {
+				transform: rotate(1turn);
 			}
 		}
-	}
+    }
 
-	// Hover
-	&:hover .dish__btn-select > * {
-		transition: margin-right 0.25s linear, transform 0.45s ease-in-out;
-		margin-right: 0;
-		i {
-			// animation rotate icon
-			transform: rotate(1turn);
-		}
-	}
-}
+    &__check-icon {
+        @include flex($default, $default, center, center);
+        background-color: $color-third;
+        width: 3.6rem;
+        margin-right: -3.6rem; /* make the check invisible */
+        transition: margin-right 0.25s linear;
 
-.dish__description {
-	overflow: hidden;
-
-	h4 {
-		@include text-ellipsis;
-		margin: 0;
-		margin-bottom: 0.3rem;
-	}
-
-	p {
-		@include text-ellipsis;
-		margin: 0;
-	}
+        i {
+            color: white;
+            font-size: 1.4rem;
+            transition: transform 0.45s ease-in-out;
+        }
+    }
 }
 
 // Button Order

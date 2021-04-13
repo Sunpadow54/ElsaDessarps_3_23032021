@@ -72,37 +72,3 @@
 		animation: filling-heart 0.7s cubic-bezier(0.32, 0, 0.71, 0) forwards;
 	}
 }
-
-// ------------ Btn SELECT DISH*/
-
-.dish__btn-select {
-	@include grid($default, $default, center, center, "btn-check");
-
-	input {
-		grid-area: btn-check;
-		z-index: 2;
-		opacity: 0;
-		@include shape(100%, 100%); /* click area on all the btn */
-
-		&:checked + span {
-			margin-right: 0;
-			i {
-				/* fix fix the rotation if the btn is checked */
-				transform: rotate(1turn);
-			}
-		}
-	}
-	span {
-		width: 3.6rem;
-		grid-area: btn-check;
-		transition: margin-right 0.27s linear;
-
-		// icon select
-		i {
-			@include flex($default, $default, center, center);
-			height: 100%;
-			color: white;
-			font-size: 1.4rem;
-		}
-	}
-}
