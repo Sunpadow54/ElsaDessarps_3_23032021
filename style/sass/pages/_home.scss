@@ -66,7 +66,7 @@
 		@include flex(column, $default, center, center);
 		gap: $gutters;
 		min-height: 300px;
-	}	
+	}
 
 	h2 {
 		@include desktop {
@@ -101,9 +101,9 @@
 			background-color: map-get($color, bg-blocs);
 			white-space: nowrap;
 			padding-right: 3rem;
-		
+
 			p {
-				color:black;
+				color: black;
 			}
 
 			// mediaquery
@@ -116,7 +116,13 @@
 			&::before {
 				content: counter(compteur);
 				@include flex($default, $default, center, center);
-				@include position(absolute, $default, $default, $default, -12px);
+				@include position(
+					absolute,
+					$default,
+					$default,
+					$default,
+					-12px
+				);
 				@include shape(27px, 27px, 50%);
 				font-size: 0.9rem;
 				order: 1;
@@ -139,7 +145,7 @@
 					}
 				}
 			}
-			
+
 			// hover/active changes
 			&:hover,
 			&:active {
@@ -154,9 +160,6 @@
 		}
 	}
 }
-
-
-
 
 // ------------ RESTAURANTS
 

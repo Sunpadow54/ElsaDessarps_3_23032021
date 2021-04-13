@@ -1,6 +1,6 @@
 // -----------------------------------------------------------
 /* REFACTOR */
-/* Reset some basic automatic style */
+// Reset some basic automatic style
 // -----------------------------------------------------------
 
 html {
@@ -15,13 +15,12 @@ html {
 
 body {
 	margin: 0;
-	// page take the whole space;
-	min-height: 100vh;
+	min-height: 100vh; /* page take the whole space */
 	@include flex(column);
 }
 
 main {
-	flex: 1; // page take the whole space;
+	flex: 1; /* page take the whole space */
 }
 
 // lists & cie refactor
@@ -49,7 +48,7 @@ img {
 	display: block;
 	object-fit: cover;
 	object-position: center;
-    @include shape(100%, 100%);
+	@include shape(100%, 100%);
 }
 
 // links & buttons basic refactor

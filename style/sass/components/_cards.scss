@@ -1,7 +1,11 @@
+// -----------------------------------------------------------
+/* CARDS */
+// -----------------------------------------------------------
+
 .cards {
-    display:flex;
+	display: flex;
 	@include shadows;
-    background-color: white;
+	background-color: white;
 	border-radius: 15px;
 	overflow: hidden;
 }

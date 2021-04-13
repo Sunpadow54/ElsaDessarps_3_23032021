@@ -1,5 +1,5 @@
 // -----------------------------------------------------------
-/* Restaurant Menus */
+/* MENUS */
 // -----------------------------------------------------------
 
 // ------------ MAIN */
@@ -43,7 +43,7 @@
 		@include flex(column);
 		width: 100%;
 		@include desktop {
-            @include grid(repeat(3, 1fr), auto);
+			@include grid(repeat(3, 1fr), auto);
 			gap: 2.5rem;
 			max-width: $max-width-desk;
 		}
@@ -84,18 +84,18 @@
 		align-self: center;
 		padding-left: 0.8rem;
 		flex: 1;
-        overflow: hidden;
+		overflow: hidden;
 
-        h4 {
-            @include text-ellipsis;
-            margin: 0;
-            margin-bottom: 0.3rem;
-        }
-    
-        p {
-            @include text-ellipsis;
-            margin: 0;
-        }
+		h4 {
+			@include text-ellipsis;
+			margin: 0;
+			margin-bottom: 0.3rem;
+		}
+
+		p {
+			@include text-ellipsis;
+			margin: 0;
+		}
 	}
 
 	&__price {
@@ -105,35 +105,35 @@
 		color: map-get($color, bg-footer-txt);
 	}
 
-    &__btn-select {
-        @include position(absolute, 0, 0, 0, 0);
-        @include shape(100%, 100%);
-        z-index: 2;
+	&__btn-select {
+		@include position(absolute, 0, 0, 0, 0);
+		@include shape(100%, 100%);
+		z-index: 2;
 		opacity: 0;
 
-        // animate the check
-        &:checked + .dish__check-icon {
-            margin-right: 0;
+		// animate the check
+		&:checked + .dish__check-icon {
+			margin-right: 0;
 
-            i {
+			i {
 				transform: rotate(1turn);
 			}
 		}
-    }
+	}
 
-    &__check-icon {
-        @include flex($default, $default, center, center);
-        background-color: $color-third;
-        width: 3.6rem;
-        margin-right: -3.6rem; /* make the check invisible */
-        transition: margin-right 0.25s linear;
+	&__check-icon {
+		@include flex($default, $default, center, center);
+		background-color: $color-third;
+		width: 3.6rem;
+		margin-right: -3.6rem; /* make the check invisible */
+		transition: margin-right 0.25s linear;
 
-        i {
-            color: white;
-            font-size: 1.4rem;
-            transition: transform 0.45s ease-in-out;
-        }
-    }
+		i {
+			color: white;
+			font-size: 1.4rem;
+			transition: transform 0.45s ease-in-out;
+		}
+	}
 }
 
 // Button Order

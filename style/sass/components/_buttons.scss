@@ -1,5 +1,5 @@
 // -----------------------------------------------------------
-/* Restaurant Menus */
+/* BUTTONS */
 // -----------------------------------------------------------
 
 // ------------ Btn BRAND*/
@@ -15,7 +15,7 @@
 	white-space: nowrap;
 	background-color: $color-primary;
 	background: linear-gradient(356deg, $color-primary, $color-secondary);
-	/* animation */
+	// animation
 	transition: all 0.05s ease-in-out;
 	transform-origin: 50% 50%;
 	z-index: 1;
@@ -47,24 +47,24 @@
 	}
 }
 
-// ------------ Btn HEART*/
+// ------------ Btn HEART
 
 .btn-heart {
 	@include flex($default, $default, center, center);
 	@include shape(auto, 25px);
 	font-size: 1.5rem;
 	padding: 0 0.3rem;
-	//--- background
+	// background
 	background: linear-gradient(210deg, $color-primary, $color-secondary);
 	background-repeat: no-repeat;
 	background-position: center 27px; /* move the backgound out of the box */
-	/* negativ effet */
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	/* border around txt */
-	-webkit-text-stroke-width: 1px;
-	-webkit-text-stroke-color: rgba(0, 0, 0, 1);
-	/* animation scale*/
+	// invert txt
+	-webkit-background-clip: text; /* invert text  effet */
+	-webkit-text-fill-color: transparent; /* invert text effet */
+	// border txt
+	-webkit-text-stroke-width: 1px; /* border around txt */
+	-webkit-text-stroke-color: rgba(0, 0, 0, 1); /* border around txt */
+	// animation scale
 	transform-origin: top;
 	transform: scale(1);
 
