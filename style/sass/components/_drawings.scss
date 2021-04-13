@@ -94,7 +94,7 @@
 	&__shape {
 		position: relative;
 		@include shape(4rem, 5rem, 41% 59% 59% 41% / 62% 74% 26% 38%);
-		border: 0.42rem solid tone-color($color-secondary, 15%, lighten);
+		border: 0.42rem solid lighten($color-secondary, 15%);
 		background-color: $color-secondary;
 		background: linear-gradient(
 			342deg,
@@ -129,7 +129,7 @@
 		@include position(absolute, $default, $default, -1.1rem, -1.05rem);
 		@include shape(4rem, 5rem, 41% 59% 59% 41% / 62% 74% 26% 38%);
 		background-color: desaturate(
-			tone-color($color-secondary, 20%, darken),
+			darken($color-secondary, 20%),
 			60%
 		);
 		z-index: -1;
@@ -152,7 +152,7 @@
 		@include position(absolute, $default, 0, 0.6rem, 0);
 		@include shape(1.3rem, 1.3rem, 50%);
 		margin: auto;
-		border: 0.25rem solid tone-color($color-violet-dark, 10%, darken);
+		border: 0.25rem solid darken($color-violet-dark, 10%);
 		background-color: $color-primary;
 		background: linear-gradient(
 			140deg,

@@ -17,14 +17,14 @@ $color-canvas: #000000;
 
 // colors elements
 $color: (
-  bg-footer-txt: tone-color($color-canvas, 21%, lighten),
-  bg-blocs: tone-color($color-canvas, 96%, lighten),
+  bg-footer-txt: lighten($color-canvas, 21%),
+  bg-blocs: lighten($color-canvas, 96%),
 );
 
 // colors of the drawings (loader)
-$color-meat-strap: desaturate(tone-color($color-secondary, 20%, darken), 80%);
-$color-violet-dark: tone-color($color-primary, 10%, darken);
-$color-avocado-skin: tone-color($color-third, 35%, darken);
+$color-meat-strap: desaturate(darken($color-secondary, 20%), 80%);
+$color-violet-dark: darken($color-primary, 10%);
+$color-avocado-skin: darken($color-third, 35%);
 
 // ------------ FONTS
 

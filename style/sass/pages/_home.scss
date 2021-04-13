@@ -35,7 +35,7 @@
 
 // Search Location input
 .hero__search {
-	background-color: tone-color($color-canvas, 90%, lighten);
+	background-color: lighten($color-canvas, 90%);
 	box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.15);
 	width: 100%;
 	padding: 0.9rem;
@@ -143,7 +143,7 @@
 			// hover/active changes
 			&:hover,
 			&:active {
-				background-color: tone-color($color-primary, 35%, lighten);
+				background-color: lighten($color-primary, 35%);
 			}
 
 			&:hover::after,
@@ -255,6 +255,6 @@
 		padding: 0.4rem 1rem;
 		margin: 1rem;
 		background-color: $color-third;
-		color: tone-color($color-third, 35%, darken);
+		color: darken($color-third, 35%);
 	}
 }
