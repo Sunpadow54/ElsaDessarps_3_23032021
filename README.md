@@ -1,7 +1,7 @@
 # Ohmyfood!
 
-*Projet de formation n°3 du parcours Développeur Web - Openclassrooms*
-Dynamisez une page web avec des animations Css.
+## *Projet de formation n°3 du parcours Développeur Web - Openclassrooms*
+### Dynamisez une page web avec des animations Css.
 
 ***
 
