@@ -18,11 +18,6 @@ Réaliser le prototype en HTML et CSS 100% mobile de la page web de Ohmyfood! (u
 
 ***
 
-### GithubPage link
-
-https://sunpadow54.github.io/ElsaDessarps_3_23032021/
-
-
 ### Made with
 
 Html / Css / Sass
@@ -31,4 +26,4 @@ Html / Css / Sass
 
 ### Auteur
 
-Sunpadown / elsa dessarps / 2021
+Sunpadown / 2021
